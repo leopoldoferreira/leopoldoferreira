@@ -14,8 +14,8 @@
 
 <img align="left" alt="Python" width="26px" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" />
 <img align="left" alt="Kotlin" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png" />
-<img align="left" alt="Spring" width="26px" src=https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg/>
-<img align="left" alt="SQL" width="26px" src=**"https://img.icons8.com/ios-glyphs/30/ffffff/sql.png"/>
+<img align="left" alt="Spring" width="26px" src="https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg" />
+<img align="left" alt="SQL" width="26px" src="https://img.icons8.com/ios-glyphs/30/ffffff/sql.png"/>
 <img align="left" alt="Rest" width="26px" src="https://img.icons8.com/material-outlined/24/ffffff/api-settings.png" />
 
 <br />
