@@ -18,7 +18,7 @@
 
 <img align="left" alt="Spring" width="26px" src="https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg" />
 
-<img align="left" alt="SQL" width="26px" src="https://cdn-icons-png.flaticon.com/512/29/29165.png" />
+<img align="left" alt="SQL" width="26px" src="https://cdn2.iconfinder.com/data/icons/programming-50/64/206_programming-sql-data-database-512.png" />
 
 
 <br />
