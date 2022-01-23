@@ -14,11 +14,11 @@
 
 <img align="left" alt="Python" width="26px" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" />
 
-<img align="left" alt="Kotlin" width="26px" src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/kotlin-256.png" />
+<img align="left" alt="Kotlin" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png" />
 
-<img align="left" alt="Kotlin" width="26px" src="https://cdn4.iconfinder.com/data/icons/web-basics-vol-05/512/data_database_mysql_server_sql_storage-256.png" />
+<img align="left" alt="Spring" width="26px" src="https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg" />
 
-<img align="left" alt="Kotlin" width="26px" src="https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg" />
+<img align="left" alt="SQL" width="26px" src="https://cdn-icons-png.flaticon.com/512/29/29165.png" />
 
 
 <br />
