@@ -1,6 +1,6 @@
 ### Hi there, I'm Leopoldo Ferreira 👋 
 
-## I'm a developer, eternal student and future data scientist.
+## Eternal technology student.
 
 - :nerd_face: I'm a student of data science and anything related
 - :eyes: I’m currently looking for a job
