@@ -17,7 +17,7 @@
 <img align="left" alt="Spring" width="26px" src="https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg" />
 <img align="left" alt="SQL" width="26px" src="https://img.icons8.com/external-outline-juicy-fish/60/ffffff/external-sql-coding-and-development-outline-outline-juicy-fish.png"/>
 <img align="left" alt="Rest" width="26px" src="https://img.icons8.com/material-outlined/24/ffffff/api-settings.png" />
-
+<img align="left" alt="Python" width="26px" src="https://cdn1.iconfinder.com/data/icons/basic-ui-element-2-2-line/512/Basic_UI_Elements_-_2.1_-_line-34-256.png" />
 <br />
 <br />
 
