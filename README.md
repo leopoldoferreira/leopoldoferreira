@@ -13,11 +13,12 @@
 ### Languages and Tools:
 
 <img align="left" alt="Python" width="26px" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" />
+<img align="left" alt="Artificial Intelligence" width="26px" src="https://toppng.com/uploads/preview/aiforia-icon-white-ai-icon-white-11553459786nbaultfwse.png" />
 <img align="left" alt="Kotlin" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png" />
 <img align="left" alt="Spring" width="26px" src="https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg" />
 <img align="left" alt="SQL" width="26px" src="https://img.icons8.com/external-outline-juicy-fish/60/ffffff/external-sql-coding-and-development-outline-outline-juicy-fish.png"/>
 <img align="left" alt="Rest" width="26px" src="https://img.icons8.com/material-outlined/24/ffffff/api-settings.png" />
-<img align="left" alt="Python" width="26px" src="https://uxwing.com/wp-content/themes/uxwing/download/17-internet-network-technology/artificial-intelligence-ai.png" />
+
 <br />
 <br />
 
