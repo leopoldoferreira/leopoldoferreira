@@ -2,22 +2,19 @@
 
 ## Eternal technology student.
 
-- :nerd_face: I'm a student of data science and anything related
-- :eyes: I’m currently looking for a job
+- :eyes: Looking for a job
 
 [<img align="left" alt="leopoldoferreira | LinkedIn" width="22px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />][linkedin]
 [<img align="left" alt="leopoldoferreira | DataCamp" width="22px" src="https://www.datacamp.com/datacamp-sq.png?v=20102020" />][datacamp]
 
 <br />
 
-### Languages and Tools:
+### About me:
 
-<img align="left" alt="Python" width="26px" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" />
-<img align="left" alt="Artificial Intelligence" width="26px" src="https://w7.pngwing.com/pngs/630/502/png-transparent-artificial-intelligence-computer-icons-robotics-artificial-intelligence-icon-angle-text-computer-thumbnail.png" />
-<img align="left" alt="Kotlin" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png" />
-<img align="left" alt="Spring" width="26px" src="https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg" />
-<img align="left" alt="SQL" width="26px" src="https://img.icons8.com/external-outline-juicy-fish/60/ffffff/external-sql-coding-and-development-outline-outline-juicy-fish.png"/>
-<img align="left" alt="Rest" width="26px" src="https://img.icons8.com/material-outlined/24/ffffff/api-settings.png" />
+- Bachelor in Information Systems
+- Learned to code in C and Java
+- Learned Artificial Intelligence and Python on my Master Degree experience (unfortunately I didn't finish)
+- Learning Web with Kotlin/Spring to land a job
 
 <br />
 <br />
