@@ -1,6 +1,6 @@
 ### Hi there, I'm Leopoldo Ferreira 👋 
 
-## Eternal student.
+## Passionate about technology, eternal student.
 
 - :eyes: Looking for a job
 
