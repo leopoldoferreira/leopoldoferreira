@@ -13,7 +13,7 @@
 
 - Bachelor in Information Systems
 - Learned to code in C and Java
-- Learned Artificial Intelligence and Python on my Master Degree experience (unfortunately I didn't finish)
+- Learned Artificial Intelligence and Python on my Master Degree experience, unfortunately I didn't finish.
 - Learning Web with Kotlin/Spring to land a job
 
 <br />
