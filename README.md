@@ -2,7 +2,6 @@
 
 ## Passionate about technology, eternal student.
 
-- :eyes: Looking for a job
 
 [<img align="left" alt="leopoldoferreira | LinkedIn" width="22px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />][linkedin]
 [<img align="left" alt="leopoldoferreira | DataCamp" width="22px" src="https://www.datacamp.com/datacamp-sq.png?v=20102020" />][datacamp]
@@ -18,6 +17,10 @@
 - Learning a lot of Data Science subjects on DataCamp
 - Learning Web with Kotlin/Spring to land a job
 
+### I'm currently:
+- :eyes: Looking for a job
+- Learning Data Science subjects on DataCamp
+- Learning Web Development with Kotlin/Spring
 
 <br />
 <br />
