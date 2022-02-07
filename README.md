@@ -12,10 +12,12 @@
 ### About me:
 
 - Bachelor in Information Systems
+- Advanced English
 - Learned to code in C and Java
 - Learned Artificial Intelligence and Python on my Master Degree experience, unfortunately I didn't finish
 - Learning a lot of Data Science subjects on DataCamp
 - Learning Web with Kotlin/Spring to land a job
+
 
 <br />
 <br />
