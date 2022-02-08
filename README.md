@@ -1,16 +1,30 @@
-### Hi there, I'm Leopoldo Ferreira 👋 
+### Olá, meu nome é Leopoldo Ferreira 👋  [[English Version]](#1)
 
-## Passionate about technology, eternal student.
+## Sou apaixonado por tecnologia e eterno estudante.
 
 [Currículo](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf) <br>
-[Resume](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf)
-[[English]](#1)
+[Linkedin](https://linkedin.com/in/leopoldo-ferreira) <br>
+[DataCamp](https://www.datacamp.com/profile/leopoldoferreira) <br>
 
+### Sobre mim:
 
-[<img align="left" alt="leopoldoferreira | LinkedIn" width="22px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />][linkedin]
-[<img align="left" alt="leopoldoferreira | DataCamp" width="22px" src="https://www.datacamp.com/datacamp-sq.png?v=20102020" />][datacamp]
+- Bacharel em Sistemas de Informação
+- Inglês avançado
+- Aprendi a programar em C e Java
+- Aprendi Inteligência Artificial e Python na minha experiência de mestrado, o qual não consegui concluir
 
+### Atualmente estou:
+- :eyes: Procurando por uma oportunidade de emprego
+- Aprendendo disciplinas de Ciência de Dados no [DataCamp](https://www.datacamp.com/profile/leopoldoferreira)
+- Aprendendo Desenvolvimento [Web com Kotlin/Spring](https://www.udemy.com/share/104E503@MrWeaUsfTPGnTBT-9S9ZHtS678sLqSiX-TSt07fIxc6Nyc0N6crtNuFooKArbY0G/)
 <br />
+<br />
+
+### Hi there, I'm Leopoldo Ferreira 👋 <a name="1"></a>
+
+[Linkedin](https://linkedin.com/in/leopoldo-ferreira) <br>
+[DataCamp](https://www.datacamp.com/profile/leopoldoferreira) <br>
+[Resume](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf)
 
 ### About me:
 
@@ -24,10 +38,7 @@
 - Learning Data Science subjects on DataCamp
 - Learning Web Development with Kotlin/Spring
 
-<br />
-<br />
 
-<a name="1"></a>### English
 ---
 [linkedin]: https://linkedin.com/in/leopoldo-ferreira
 [datacamp]: https://www.datacamp.com/profile/leopoldoferreira
