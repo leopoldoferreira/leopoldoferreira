@@ -4,7 +4,7 @@
 
 [Currículo](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf) <br>
 [Resume](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf)
-
+[[English]](#1)
 
 
 [<img align="left" alt="leopoldoferreira | LinkedIn" width="22px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />][linkedin]
@@ -27,6 +27,7 @@
 <br />
 <br />
 
+<a name="1"></a>### English
 ---
 [linkedin]: https://linkedin.com/in/leopoldo-ferreira
 [datacamp]: https://www.datacamp.com/profile/leopoldoferreira
