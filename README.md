@@ -2,8 +2,8 @@
 
 ## Passionate about technology, eternal student.
 
-[Currículo]: https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf
-[Resume]: https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf
+[Currículo](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf)
+[Resume](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf)
 
 
 
