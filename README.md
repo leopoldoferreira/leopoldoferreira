@@ -2,8 +2,10 @@
 
 ## Passionate about technology, eternal student.
 
-Currículo/Resume
-https://github.com/leopoldoferreira/leopoldoferreira
+[Currículo]: https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf
+[Resume]: https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf
+
+
 
 [<img align="left" alt="leopoldoferreira | LinkedIn" width="22px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />][linkedin]
 [<img align="left" alt="leopoldoferreira | DataCamp" width="22px" src="https://www.datacamp.com/datacamp-sq.png?v=20102020" />][datacamp]
