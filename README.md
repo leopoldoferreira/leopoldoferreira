@@ -24,7 +24,7 @@
 
 ### Hi there, I'm Leopoldo Ferreira 👋 <a name="1"></a>
 
-[Resume](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf)
+[Resume](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf) <br>
 [Linkedin](https://linkedin.com/in/leopoldo-ferreira) <br>
 [DataCamp](https://www.datacamp.com/profile/leopoldoferreira) <br>
 
