@@ -20,6 +20,8 @@
 <br />
 <br />
 
+---
+
 ### Hi there, I'm Leopoldo Ferreira 👋 <a name="1"></a>
 
 [Linkedin](https://linkedin.com/in/leopoldo-ferreira) <br>
@@ -38,7 +40,5 @@
 - Learning Data Science subjects on DataCamp
 - Learning Web Development with Kotlin/Spring
 
-
----
 [linkedin]: https://linkedin.com/in/leopoldo-ferreira
 [datacamp]: https://www.datacamp.com/profile/leopoldoferreira
