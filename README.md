@@ -16,7 +16,7 @@
 [Histórico Resumido](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/faculdade/historico_resumido.pdf) <br>
 - Aprendi programação (C, Java), Banco de Dados (SQL), Programação Web (HTML+CSS), Estrutura de Dados, Engenharia de Software, entre outras disciplinas fundamentais que envolvem sistemas
 - Participante do Núcleo de Prática em Sistemas de Informação [(NUPSI)](https://github.com/UEMGNUPSI)
-- Representante Discente do Centro Acadêmico de Sistemas de Informação
+- Representante Titular Discente na Coordenação de Curso
 - Representante do Colegiado do Curso
 - Realização de projeto de Pesquisa e Extensão, os quais foram precursores para ingresso no Mestrado <br>
 [Currículo Lattes](http://lattes.cnpq.br/7733759309376292) <br>
