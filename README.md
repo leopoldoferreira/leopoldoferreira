@@ -7,6 +7,8 @@
 [DataCamp](https://www.datacamp.com/profile/leopoldoferreira)
 
 - :eyes: Procurando por uma oportunidade de emprego
+- :heart: Python 
+- 🗽 Inglês Avançado <br>
 
 ### Experiência Acadêmica:
 
