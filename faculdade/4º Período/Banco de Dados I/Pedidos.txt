@@ -1,0 +1,47 @@
+create table cliente
+(nome char (15) not null,
+sobrenome char (15) not null,
+telefone number (9) not null,
+estado char (18) not null,
+end char (20) not null,
+bairro char (20) not null,
+cidade char (20) not null,
+id number (5) not null primary key)
+
+create table pedidos
+(forma_pag char (10),
+cod number (5) not null primary key,
+data date,
+id_cliente number (5) references cliente(id))
+
+create table artigos
+(cod number (5) not null primary key,
+numero number (8) not null,
+preco number (10,2) not null)
+
+create table ped_artigo
+(id number (5) not null,
+cod_ped number (5) references pedidos(cod),
+cod_art number (5) references artigos(cod))
+
+insert into cliente values( 'Aureo', 'Martins', '99990001', 'MG', 'Rua Pirajuba', 'Alto Boa Vista', 'Pirajuba', 123)
+insert into cliente values( 'Aurelio', 'Baldo', '99990002', 'MG', 'Rua Lauriston', 'Alto Boa Vista', 'Frutal', 345)
+insert into cliente values( 'Aurelino', 'Nelson', '99990003', 'MG', 'Rua Wiron', 'Alto Boa Vista', 'Frutal', 567)
+insert into pedidos values( 'crédito', '1', default, 123)
+insert into pedidos values( 'crédito', '2', default, 345)
+insert into pedidos values( 'crédito', '3', default, 567)
+insert into artigos values( 99, 142, 150.90)
+insert into artigos values( 98, 142, 150.90)
+insert into artigos values( 97, 142, 150.90)
+insert into ped_artigo values( 10, 3, 97)
+insert into ped_artigo values( 11, 1, 99)
+insert into ped_artigo values( 12, 2, 98)
+
+select * from cliente
+select * from pedido
+select * from artigo
+select * from ped_artigo
+drop table cliente
+drop table pedidos
+drop table artigos
+drop table ped_artigo

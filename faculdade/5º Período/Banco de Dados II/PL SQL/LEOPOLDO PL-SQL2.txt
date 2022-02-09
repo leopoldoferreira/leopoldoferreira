@@ -1,0 +1,83 @@
+Dado um salário X calcule o salário líquido, sendo que os descontos de IRPF ocorrem conforme a tabela abaixo:
+create or replace function "SALARIO_LIQUIDO" (salario in NUMBER)
+return NUMBER
+is sal NUMBER;
+aliquota NUMBER;
+begin
+sal:=salario;
+  if sal<=1313.69 then
+    sal:=sal;
+    return sal;
+  else
+    if sal>1313.69 or sal<=2625.12 then
+      sal:=sal-(sal*0.15);
+      return sal;
+    else
+      if sal>2625.12 then
+        sal:=sal-(sal*0.275);
+        return sal;
+      else
+      return sal;
+      end if;
+    end if;
+  end if;
+end;
+  
+select SALARIO_LIQUIDO(1300) as SALARIO from dual;
+select SALARIO_LIQUIDO(1400) as SALARIO from dual;
+select SALARIO_LIQUIDO(2700) as SALARIO from dual;
+
+
+Dado um número X representando a quantidade de números primos que se deseja retornar;
+create or replace function "PRIMO"(num in number)
+return number
+is
+i NUMBER;
+qntnaoprimos NUMBER;
+res NUMBER;
+begin
+  i:=2;
+  qntnaoprimos:=0;
+  if num = 2 then
+        i:= 0;
+        return i;
+  else
+  	 loop 
+    		if num mod i = 0 then
+            qntnaoprimos:=qntnaoprimos+1;
+      			return qntnaoprimos;
+    		end if;
+    		exit when i > (num/2);
+    		i:=i+1;
+  	end loop;
+    res:= num-qntnaoprimos;
+   	return res;
+  end if;
+end;
+select from primo(5) as PRMO from dual;
+
+Mostre a lista com os X primeiros primos a partir de 2;
+
+create or replace function "PRIMO"
+(num in number)
+return VARCHAR2
+is
+i NUMBER;
+begin
+  i:=2;
+  if num = 2 then
+        return 'é primo';
+  else
+  	 loop 
+    		if num mod i != 0 then
+           dbms_output.put_line('primos' || TO_CHAR(i));
+    		end if;
+    		exit when i > (num/2);
+    		i:=i+1;
+  	end loop;
+  end if;
+end;
+
+select PRIMO (17) as "PRIMO OU NÃO" FROM DUAL;
+
+

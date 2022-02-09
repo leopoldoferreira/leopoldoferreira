@@ -1,0 +1,17 @@
+pré ordem, pós ordem, em nível, em ordem.
+
+10 5 20 2 6 15 30
+			10
+	5				20
+3		6		15		30
+
+
+
+pós ordem = filhos da sub arvore primeiro, depois esquerda para direita 2,6,5,15,30,20,10
+pré ordem = começa na raiz prioriza filhos a esquerda depois a direita 10,5,2,6,20,15,30
+em nível = 10,5,2,6,15,30
+em ordem = filho extrema esquerda, pai, direita 2,5,6 10, 15, 20,30 acaba sendo crescente.
+
+Balanceamento, vai colocando 1 por 1, analisando e balanceando em etapas
+
+Vai cair pilha com duas filas

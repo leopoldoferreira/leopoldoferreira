@@ -1,0 +1,177 @@
+dados <- read.table("C:/Users/Leopo/Desktop/dados_4.txt", header = T)
+attach(dados)
+
+#Variáveis:  EstadoCivil  GrauInstrução   RegiãoProcedencia    Salário      Idade     Filhos
+#Classificação:  Nominal        Ordinal             Nominal   Contínua   Discreta   Discreta
+
+#----------------------------------------Tabelas de Frequência----------------------------------------
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável EstadoCivil
+data.frame(Absoluta = c(table(EstadoCivil)),Proporcao = c(prop.table(table(EstadoCivil))),Relativa= c(prop.table(table(EstadoCivil))*100))
+#RESULTADO:
+         Absoluta Proporcao Relativa
+Casado         25 0.5434783 54.34783
+Solteiro       21 0.4565217 45.65217
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável GrauInstrução
+data.frame(Absoluta = c(table(GrauInstrução)),Proporcao = c(prop.table(table(GrauInstrução))),Relativa=  c(prop.table(table(GrauInstrução))*100))
+#RESULTADO:
+            Absoluta Proporcao Relativa
+Fundamental       18 0.3913043 39.13043
+Médio             22 0.4782609 47.82609
+Superior           6 0.1304348 13.04348
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável RegiãoProcedencia
+data.frame(Absoluta = c(table(RegiãoProcedencia )),Proporcao = c(prop.table(table(RegiãoProcedencia))),Relativa=  c(prop.table(table(RegiãoProcedencia))*100))
+#RESULTADO:
+         Absoluta Proporcao Relativa
+Capital        17 0.3695652 36.95652
+Interior       22 0.4782609 47.82609
+Outras          7 0.1521739 15.21739
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável Salário
+data.frame(Absoluta = c( table(cut(Salário, breaks=seq(978,1023,9), right=TRUE))),Proporcao = c(prop.table( table(cut(Salário, breaks=seq(978,1023,9), right=TRUE)))),Relativa=  c(prop.table( table(cut(Salário, breaks=seq(978,1023,9), right=TRUE)))*100))
+#RESULTADO:
+                    Absoluta  Proporcao  Relativa
+(978,987]                  3 0.06521739  6.521739
+(987,996]                 12 0.26086957 26.086957
+(996,1005]                14 0.30434783 30.434783
+(1005,1014]               14 0.30434783 30.434783
+(1014,1023]                3 0.06521739  6.521739
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável Idade
+data.frame(Absoluta = c( table(cut(Idade, breaks=seq(10,35,5), right=TRUE))),Proporcao = c(prop.table(table(cut(Idade, breaks=seq(10,35,5), right=TRUE)))),Relativa=  c(prop.table( table(cut(Idade, breaks=seq(10,35,5), right=TRUE)))*100))
+#RESULTADO:
+        Absoluta  Proporcao  Relativa
+(10,15]        1 0.02173913  2.173913
+(15,20]        6 0.13043478 13.043478
+(20,25]       20 0.43478261 43.478261
+(25,30]       15 0.32608696 32.608696
+(30,35]        4 0.08695652  8.695652
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável Filhos
+data.frame(Absoluta = c(table(Filhos)),Proporcao = c(prop.table(table(Filhos))),Relativa=  c(prop.table(table(Filhos))*100))
+#RESULTADO:
+  Absoluta  Proporcao  Relativa
+0       12 0.26086957 26.086957
+1       16 0.34782609 34.782609
+2       14 0.30434783 30.434783
+3        4 0.08695652  8.695652
+
+#----------------------------------------Medidas Resumo de Posição----------------------------------------
+
+#A Seguir cálculo e exibição da Média e Mediana das Variáveis Salário, Idade e Filhos. 
+#sendo 1, = Media
+#e 2, = Mediana 
+matrix(c(mean (Salário), mean(Filhos), mean(Idade), meadian(Salário), median(Filhos), median(Idade)), 2, 3)
+#RESULTADO:
+            [,1]      [,2] [,3]
+[1,] 1000.912174   24.6087  1.0
+[2,]    1.217391 1001.1450 24.5
+
+#----------------------------------------Medidas Resumo de Dispersão----------------------------------------
+
+#A Seguir cálculo e exibição da Variância e Desvio Padrão das Variáveis Salário, Idade e Filhos.
+#sendo 1, = Variância
+#e 2, = Desvio padrão
+matrix(c(var(Salário), var(Filhos), var(Idade), sd(Salário), sd(Filhos), sd(Idade)), 2,3)
+#RESULTADO:
+           [,1]      [,2]      [,3]
+[1,] 85.6005818 20.821256 0.9407572
+[2,]  0.8850242  9.252058 4.5630315
+
+#----------------------------------------Tabelas de Frequência Bidimensional----------------------------------------
+
+#A Seguir cálculo e exibição da tabela de frequência ABSOLUTA de uma análise bidimensional entre RegiãoProcedencia e GrauInstrução.
+table(RegiãoProcedencia, GrauInstrução)
+#RESULTADO:
+                 GrauInstrução
+RegiãoProcedencia Fundamental Médio Superior
+         Capital            6     9        2
+         Interior           7    12        3
+         Outras             5     1        1
+
+#A Seguir cálculo e exibição da tabela de frequência PROPORCIONAL de uma análise bidimensional entre RegiãoProcedencia e GrauInstrução.
+prop.table(table(RegiãoProcedencia, GrauInstrução))
+#RESULTADO:
+                 GrauInstrução
+RegiãoProcedencia Fundamental      Médio   Superior
+         Capital   0.13043478 0.19565217 0.04347826
+         Interior  0.15217391 0.26086957 0.06521739
+         Outras    0.10869565 0.02173913 0.02173913
+
+#A Seguir cálculo e exibição da tabela de frequência RELATIVA de uma análise bidimensional entre RegiãoProcedencia e GrauInstrução.
+prop.table(table(RegiãoProcedencia, GrauInstrução))*100
+#RESULTADO:
+
+                 GrauInstrução
+RegiãoProcedencia Fundamental     Médio  Superior
+         Capital    13.043478 19.565217  4.347826
+         Interior   15.217391 26.086957  6.521739
+         Outras     10.869565  2.173913  2.173913
+
+#-------------------- SABEMOS QUE NÃO É NECESSÁRIO, MAS FIZEMOS  DE REGIÃO PROCEDENCIA x GRAU INSTRUÇÃO-------------------------------
+#A Seguir cálculo e exibição do "Qui quadrado" de uma análise bidimensional entre RegiãoProcedencia e GrauInstrução.
+chisq.test(table(RegiãoProcedencia,GrauInstrução))
+#RESULTADO:
+
+        Pearson's Chi-squared test
+
+data:  table(RegiãoProcedencia, GrauInstrução)
+X-squared = 4.2134, df = 4, p-value = 0.3779
+
+#A Seguir soma da quantia de valores da tabela (n).
+sum(table(RegiãoProcedencia,GrauInstrução))
+#RESULTADO:
+[1] 46
+
+#A seguir o calculo do coeficiente de contingencia.
+sqrt(4.2134/(4.2134+46))
+#RESULTADO:
+[1] 0.289672
+
+#A Seguir, para tabelas KxK com K<= 10, considerar valor maximo.
+sqrt((3-1)/3)
+#RESULTADO:
+[1] 0.8164966
+
+#Análise: A relação entre RegiãoProcedencia e GrauInstrução é fraca, pois ela se aproxima mais de 0 do que 0.8164966 (Valor máximo).
+ 
+# -------------------------------------------EXTRA---------------------------------------------------------------
+#Frequencia relativa, proporcional e absoluta dimensional de estado civil e grau de instrução
+#RESULTADO:
+
+> table(EstadoCivil, GrauInstrução)
+           GrauInstrução
+EstadoCivil Fundamental Médio Superior
+   Casado             9    12        4
+   Solteiro           9    10        2
+> prop.table(table(EstadoCivil, GrauInstrução))
+           GrauInstrução
+EstadoCivil Fundamental      Médio   Superior
+   Casado    0.19565217 0.26086957 0.08695652
+   Solteiro  0.19565217 0.21739130 0.04347826
+> prop.table(table(EstadoCivil, GrauInstrução))*100
+           GrauInstrução
+EstadoCivil Fundamental     Médio  Superior
+   Casado     19.565217 26.086957  8.695652
+   Solteiro   19.565217 21.739130  4.347826
+
+#Frequencia relativa, proporcional e absoluta dimensional de estado civil e região de procedência
+#RESULTADO:
+> table(EstadoCivil, RegiãoProcedencia)
+           RegiãoProcedencia
+EstadoCivil Capital Interior Outras
+   Casado         9       11      5
+   Solteiro       8       11      2
+> prop.table(table(EstadoCivil, RegiãoProcedencia))
+           RegiãoProcedencia
+EstadoCivil    Capital   Interior     Outras
+   Casado   0.19565217 0.23913043 0.10869565
+   Solteiro 0.17391304 0.23913043 0.04347826
+> prop.table(table(EstadoCivil, RegiãoProcedencia))*100
+           RegiãoProcedencia
+EstadoCivil   Capital  Interior    Outras
+   Casado   19.565217 23.913043 10.869565
+   Solteiro 17.391304 23.913043  4.347826
+> 

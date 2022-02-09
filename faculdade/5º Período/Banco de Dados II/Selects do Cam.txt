@@ -1,0 +1,23 @@
+Discente: Leonardo Matias Baldo.
+
+
+\\1
+select times.nome, jogador.nome from times join jogador on times.codigo = jogador.time_jog;
+\\2
+select partida.codigo,  partida.data,  partida.hora, t1.nome, t2.nome
+from partida 
+join times t1 on partida.time1 = t1.codigo
+join times t2 on partida.time2 = t2.codigo;
+
+\\3
+select partida.codigo, jogador.nome
+from jogador_partida
+join jogador on jogador_partida.codigo_jogador = jogador.codigo 
+join partida on jogador_partida.codigo_partida = partida.codigo; 
+
+\\4
+select partida.data, t1.nome, partida.goltime1 , t2.nome, partida.goltime2 
+from partida 
+join times t1 on partida.time1 = t1.codigo 
+join times t2 on partida.time2 = t2.codigo;
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Introdução</title>
+	<head>
+	<body>
+		<h1 id="titulo">Vetor</h1>
+		<script>
+		var tam = prompt ("Quantas pessoas deseja calcular?");
+		var aux;
+		var i;
+
+		var nome = new Array();
+		var etapa1 = new Array();
+		var etapa2 = new Array();
+		var notaFinal = new Array();
+		var pegaNotas;
+		var media = 0;
+		for(i=0;i<tam;i++){
+			aux = prompt("Nome do aluno: ");
+			nome.push(aux);
+			aux = prompt("Nota da 1a etapa: ");
+			etapa1.push(aux);
+			aux = prompt("Nota da 2a etapa: ");
+			etapa2.push(aux);
+
+			notaFinal[i] = parseInt(etapa1[i]) + parseInt(etapa2[i]);
+			notaFinal.push(aux);
+			media = media+notaFinal[i];
+		}
+		
+			document.write("A média dos alunos foi: <b>"+media/tam+"</b></br></br>");
+
+		for(i=0;i<tam;i++){
+			document.write("Aluno: <b>"+nome[i]+"</b> </br>");
+			document.write("Nota 1a Etapa: <b>"+etapa1[i]+"</b> </br>");
+			document.write("Nota 2a Etapa: <b>"+etapa2[i]+"</b> </br>");
+			document.write("Nota Final: <b>"+notaFinal[i]+"</b> </br>");
+
+			if(notaFinal[i] < 40 ){
+				document.write("Reprovado");
+			}else
+
+				if(notaFinal[i] >= 40 && notaFinal[i] < 60){
+					document.write("Exame");
+				}else
+					if(notaFinal[i] >= 60){
+						document.write("Aprovado");
+					}else{}
+
+			document.write("</br></br>");
+
+		}
+
+
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,92 @@
+create sequence idn_emp increment by 1 start with 100 maxvalue 999 nocycle
+select * from user_sequences
+select * from user_tables
+
+Select * from emp
+insert into emp (codigo, nome) values(idn_emp.nextval,'MARCELO');
+insert into emp (codigo, nome) values(idn_emp.nextval,'ADRIANA');
+insert into emp (codigo, nome) values(idn_emp.nextval,'ALEXANDRE');
+insert into emp (codigo, nome) values(idn_emp.nextval,'ANA');
+
+alter table dep modify n_dep number(4)
+insert into dep (n_dep, nome_dep) values (idn_emp.nextval,'PRODUÇÃO')
+select * from dep
+delete from dep where n_dep = 106
+
+select IDN_EMP.currval from dual
+
+create sequence sqc_restaurantenormal incremente by 1 start with 100 maxvalue 999 no cycle
+create sequence sqc_restaurantepar incremente by 2 start with 100 maxvalue 999 no cycle
+create sequence sqc_restauranteimpar incremente by 3 start with 101 maxvalue 999 no cycle
+
+
+select * from user_sequences 
+
+CREATE SEQUENCE SQC_EMP INCREMENT BY 1 START WITH 100 MAXVALUE 999 NO CYCLE
+CREATE OR REPLACE TRIGGER TG_BI_EMP
+BEFORE INSERT ON EMP FOR EACH ROW
+BEGIN
+	IF :NEW.CODIGO IS NULL THEN
+		SELECT SQC_EMP.NEXTVAL
+		INTO :NEW.CODIGO FROM DUAL;
+	END IF;
+END;
+INSERT INTO EMP (CODIGO, NOME) VALUES (null, 'JHON');
+SELECT * FROM EMP
+
+create sequence sqc_dep increment by 1 start with 213 maxvalue 999 nocycle
+CREATE OR REPLACE TRIGGER TG_BI_DEP
+BEFORE INSERT ON DEP FOR EACH ROW
+BEGIN
+	IF :NEW.N_DEP IS NULL THEN
+		SELECT SQC_DEP.NEXTVAL
+		INTO :NEW.N_DEP FROM DUAL;
+	END IF;
+END;
+
+INSERT INTO DEP (N_DEP, NOME_DEP) VALUES (NULL, 'NUPSI');
+SELECT * FROM DEP
+
+
+create sequence sqc_prof increment by 1 start with 666 maxvalue 999 nocycle
+CREATE OR REPLACE TRIGGER TG_BI_PROF
+BEFORE INSERT ON PROFISSIONAL FOR EACH ROW
+BEGIN
+  IF :NEW.N_CONTROLE IS NULL THEN
+    SELECT IDN_EMP.NEXTVAL
+    INTO :NEW.N_CONTROLE FROM DUAL;
+  END IF;
+END;
+INSERT INTO PROFISSIONAL VALUES (null,4,'AMARINDO','20/03/97','Chefe','Rua das Moitas',178,'Franca');
+SELECT * FROM PROFISSIONAL
+
+CREATE SEQUENCE SQC_VACINA INCREMENT BY 2 START WITH 654 MAXVALUE 6545 NOCYCLE
+CREATE OR REPLACE TRIGGER TG_VACINA 
+BEFORE INSERT ON VACINA FOR EACH ROW
+BEGIN
+  IF :NEW.ID IS NULL THEN
+    SELECT SQC_VACINA.NEXTVAL
+    INTO :NEW.ID FROM DUAL;
+  END IF;
+END;
+
+DROP SEQUENCE SQC_VACINA
+DROP TRIGGER TG_VACINA
+INSERT INTO VACINA VALUES (NULL,'TESTE','24/08/2016','25/08/2016')
+SELECT * FROM VACINA
+
+CREATE SEQUENCE SQC_CONTA 
+INCREMENT BY 12 
+START WITH 0
+MAXVALUE 1000 
+NOCYCLE
+CREATE OR REPLACE TRIGGER TG_CONTA
+BEFORE INSERT ON CONTA FOR EACH ROW
+BEGIN
+  IF :NEW.NUMCONTA IS NULL THEN
+    SELECT SQC_VACINA.NEXTVAL
+    INTO :NEW.NUMCONTA FROM DUAL;
+  END IF;
+END;
+INSERT INTO CONTA VALUES (null,'teste','C','S')
+select * from conta

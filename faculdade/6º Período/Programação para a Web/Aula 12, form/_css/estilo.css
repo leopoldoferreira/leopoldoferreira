@@ -1,0 +1,27 @@
+table.tabela{
+		border-collapse: collapse;
+		width: 80%;
+}
+form.form{
+	border-collapse: collapse;
+	width: 80%;
+}
+.peso,.altura,.imc{
+	text-align: right;
+}
+button{
+	color: #ffffff;
+	padding: 5px 20px 5px 20px;
+	border: 3px solid;
+	font-size: 14px;
+	background-color: #1780AD;
+	width: 200px;
+}
+button:hover{
+	color:#c0c0c0;
+}
+
+#interface{
+	background-color: #ccc;
+	padding: 5px;
+}

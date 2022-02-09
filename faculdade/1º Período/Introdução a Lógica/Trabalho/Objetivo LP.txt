@@ -1,0 +1,4 @@
+O objetivo da linguagem de programação é a conversão do 
+programa que vc escreveu numa linguagem legivel em instruções para o microprocessador 
+(mircroinstrução). Cada linguagem possui características proprias que permitem escrever 
+programas com mais facilidade e velocidade. 

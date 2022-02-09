@@ -1,0 +1,15 @@
+﻿table.stilo{
+     border-collapse: collapse;
+     text-align:center;
+     background-color: white;
+     border-radius: 15px;
+             }
+table.stilo tr td{
+     border:1px solid #000000;
+             }
+table.stilo td{
+     padding:5px;
+             }
+table.stilo input{
+	border-radius: 15px;
+}

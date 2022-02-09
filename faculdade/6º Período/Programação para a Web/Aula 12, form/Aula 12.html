@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Vida Saudável</title>
+		<link rel="stylesheet" type = "text/css" href="_css/estilo.css">
+	</head>
+<body>
+
+
+<form class="form">
+		<fieldset>
+		<legend>Novo Cliente</legend>
+		<P>
+		<label for"nome">Nome:</label>
+		<input class= "campo" id="campoNome" type="text" placeholder="digite o nome do novo cliente">
+		</P>
+		<P>
+		<label for"nome"> Peso: </label>
+		<input class= "campo" id="campoPeso" type="text" placeholder="digite o peso do novo cliente">
+		</P>
+		<P>
+		<label for"nome">Altura:</label>
+		<input class= "campo" id="campoAltura" type="text" placeholder="digite a altura do novo cliente">
+		</P>
+		</fieldset>
+</form>
+
+<button id="adicionar" onclick="adicionarCliente(event)">Adicionar</button>
+
+
+<table border="1" class="tabela" >
+	<tr>
+		<th>nome</th>
+		<th>peso</th>
+		<th>altura</th>
+		<th>imc</th>
+		<th>resultado</th>
+	</tr>
+		<tr>
+		<td class="nome" id="nome1"> Adamastor da Silva </td>
+		<td class="peso" id="peso1"> 89.5 </td>
+		<td class="altura" id="altura1"> 1.75 </td>
+		<td class="imc" id="imc1"> </td>
+		<td class="res" id="res1"> </td>
+
+		</tr>
+
+		<tr>
+		<td class="nome" id="nome2"> Eleanor Camila de Moraes </td>
+		<td class="peso" id="peso2"> 59.4 </td>
+		<td class="altura" id="altura2"> 1.66 </td>
+		<td class="imc" id="imc2"> </td>
+		<td class="res" id="res2"> </td>
+
+		</tr>
+
+		<tr>
+		<td class="nome" id="nome3"> Joaquim de Menezes Garcia </td>
+		<td class="peso" id="peso3"> 114.0 </td>
+		<td class="altura" id="altura3"> 1.70 </td>
+		<td class="imc" id="imc3"> </td>
+		<td class="res" id="res3"> </td>
+
+		</tr>
+</table>
+
+	<button id="calculoDeIMC" class="botao" onclick="calculo()">Calcular IMC</button>
+	
+	<script>
+		function calculo(){
+			var peso = new Array();
+			var altura = new Array();
+			var imc;
+			var imcAux;
+			var auxPeso;
+			var auxAltura;
+	
+			peso = document.getElementsByClassName("peso");
+			altura=document.getElementsByClassName("altura");
+
+
+			for(i=1;i<=peso.length;i++){
+
+			auxAltura = altura[i-1].textContent;
+			auxPeso = peso[i-1].textContent;
+
+			imcAux = auxPeso/(auxAltura*auxAltura);
+			imcAux = imcAux.toFixed(2);
+
+			imc = document.getElementById("imc"+i);
+			imc.textContent = imcAux;
+			res = document.getElementById("res"+i);
+
+
+			if(imcAux<18.5){
+				res.textContent="Peso Abaixo do Normal";
+			}
+			else{
+				if(imcAux<25){					
+					res.textContent="Peso Normal";
+				}
+				else{					
+					res.textContent = "Obeso";
+				}
+			}
+
+
+			}
+		}
+
+		function adicionarCliente(e){
+			
+		
+			e.preventDefault(); 
+			
+			var nome = document.querySelector("#campoNome");
+			var peso = document.querySelector("#campoPeso");
+			var altura = document.querySelector("#campoAltura");
+
+			var novoCliente = "<tr>"+
+			"<td class='nome'>" +nome.value + "</td>" +
+			"<td class='peso'>" +peso.value + "</td>" +
+			"<td class='altura'>" +altura.value + "</td>" +
+			"<td class='imc'></td>" + "<td class='res'></td>"+"</tr>";
+			
+			var cliente = document.querySelector("table");
+			cliente.innerHTML += novoCliente;
+
+			nome.value = "";
+			peso.value = "";
+			altura.value = "";
+	
+		}
+	</script>	
+
+
+	</body>
+</html>

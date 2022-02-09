@@ -1,0 +1,69 @@
+create table CLIENTE
+(cod_cli number (6) PRIMARY KEY NOT NULL,
+nome char (15) NOT NULL,
+sobrenome char (20) NOT NULL,
+telefone number (9) NOT NULL,
+rua char (70) NOT NULL,
+rua_num number (6) NOT NULL,
+comp char (50),
+bairro char (25)NOT NULL,
+cep number (8) NOT NULL,
+cidade char (25) NOT NULL,
+estado char (25)NOT NULL)
+
+create table ANIMAL
+(cod_ani number (6) PRIMARY KEY NOT NULL,
+nome char (20) NOT NULL,
+data_nasc date,
+especie char (30) NOT NULL,
+raça char (20) NOT NULL,
+cor char (20) NOT NULL,
+sexo char (10) NOT NULL,
+cod_cli number (6) REFERENCES CLIENTE(cod_cli))
+
+create table VACINA
+(cod_vaci number (6) PRIMARY KEY NOT NULL,
+nome char (15) NOT NULL,
+nome_lab_fab char (30) NOT NULL,
+lote_fab date)
+
+create table TOMA
+(cod_prox_vaci number (6) PRIMARY KEY NOT NULL,
+data aplica date DEFAULT sysdate NOT NULL,
+data_prox_vaci date,
+cod_ani number (6) REFERENCES animal(cod_ani),
+cod_vaci number (6) REFERENCES vacina(cod_vaci))
+
+
+
+insert into CLIENTE values( '111', 'LEONARDO', 'BALDO', '99749139', 'LAURISTON SOUZA', '226', 'NULL', 'ALTO BOA VISTA', '38200000', 'FRUTAL', 'MINAS GERAIS')
+insert into CLIENTE values( '112', 'LEOPOLDO', 'FERREIRA', '99723517', 'WIRON DE PAULA', 271, 'NULL', 'ALTO BOA VISTA', '38200000', 'FRUTAL', 'MINAS GERAIS')
+insert into CLIENTE values( '113', 'LEANDRO', 'BALDO', '99722374', 'LAURISTON SOUZA', '226', 'NULL', 'ALTO BOA VISTA', '38200000', 'FRUTAL', 'MINAS GERAIS')
+
+insert into ANIMAL values( '123', 'FELICIA', '21-JUL-2007', 'GATO', 'ABISSÍNIO', 'MARRON', 'FEMININO', 111)
+insert into ANIMAL values( '124', 'TUTANCA', '23-JAN-2010', 'GATO', 'PERSA', 'BEGE', 'MASCULINO', 113)
+insert into ANIMAL values( '125', 'FAWKES', '01-FEV-2015', 'CACHORRO', 'HUSKY SIBERIANO', 'BRANCO', 'MASCULINO', 112)
+
+insert into VACINA values( 100, 'RAIVA', 'DROGARIA ANIMAL', '01-SET-2015')
+insert into VACINA values( 101, 'PAVOVIROSE', 'DROGARIA ANIMAL', '01-SET-2015')
+insert into VACINA values( 102, 'GIÁRDIA', 'DROGARIA ANIMAL', '01-SET-2015')
+
+insert into TOMA values( 95, DEFAULT, '01-OUT-2015', 123, 100)
+insert into TOMA values( 96, DEFAULT, '15-OUT-2015', 124, 101)
+insert into TOMA values( 97, DEFAULT, '30-OUT-2015', 125, 102)
+
+delete from toma where cod_ani = 123
+delete from animal where cod_ani = 123
+delete from cliente where cod_cli = 111
+
+update animal set cor = 'PRETO' where cor = 'BRANCO' 
+update animal set data_nasc = '21-JUN-2015' where data_nasc = '01-FEV-2015'
+
+select * from cliente
+select * from animal
+select * from vacina
+select * from toma
+drop table cliente
+drop table animal
+drop table vacina
+drop table toma

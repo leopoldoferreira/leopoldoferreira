@@ -1,0 +1,69 @@
+drop table emp
+create table emp
+    (codigo number(5) PRIMARY KEY NOT NULL,
+    cnpj number(15) NOT NULL,
+    nome char(40) NOT NULL,
+    ende char(40) NOT NULL)
+
+drop table profissional
+create table profissional
+    (n_controle number(5) PRIMARY KEY NOT NULL,
+    codigo number(5) NOT NULL,
+    nome char(30) NOT NULL,
+    data_nas date NOT NULL,
+    prof char(20) NOT NULL,
+    rua char(20) NOT NULL,
+    num number(5) NOT NULL,
+    cidade char(20) NOT NULL)
+
+drop table contrato    
+create table contrato
+    (n_unico number(5) PRIMARY KEY NOT NULL,
+    data_ini date NOT NULL,
+    data_term date NOT NULL,
+    valor_hora number(10) NOT NULL,
+    n_controle number (5) references profissional (n_controle),
+    cod_emp number (5) references emp (codigo))
+
+insert into emp values(1,123456789,'empresa1','rua abc 1')
+insert into emp values(2,159753684,'empresa2','rua abc 2')
+insert into emp values(3,987654321,'empresa3','rua abc 3')
+
+insert into profissional values(1,1,'Abraao','16-JAN-1997','Chefe','Rua das Arvores',175,'Santa Adelia')
+insert into profissional values(2,2,'Amanda','21-JUN-1995','Servente','Rua das Arvores',176,'Mariana')
+insert into profissional values(3,3,'Ana','14-JUN-1996','Chefe','Rua Sao Paulo',1016,'Palestina')
+insert into profissional values(4,4,'Armando','20-MAR-1997','Servente','Rua das Moitas',177,'Franca')
+insert into profissional values(5,5,'Almeida','1-JUL-1996','Chefe de cozinha','Rua 1',20,'Araguari')
+insert into profissional values(6,6,'Arlinda','21-JAN-1994','Servente','Rua das Folhas',178,'Frutal')
+insert into profissional values(7,7,'Alkaeda','19-JUL-1993','Contador','Rua 2',10,'Monte Carmelo')
+insert into profissional values(8,8,'Aline','8-SET-1991','Organizador de Shows','Rua 4',13,'Passos')
+insert into profissional values(9,9,'Aluz','23-AGO-1992','Fachineiro','Rua 3',12,'Uberlandia')
+insert into profissional values(10,10,'Arlindo','21-AGO-1990','Garçom','Rua das Raizes',179,'Uberaba')
+
+insert into contrato values(1,'10-OUT-2015','10-OUT-2016',100,1,1)
+insert into contrato values(2,'16-FEV-2016','16-FEV-2017',80,1,2)
+insert into contrato values(3,'8-JUN-2015','8-JUN-2016',100,2,3)
+insert into contrato values(4,'9-JUN-2015','9-JUN-2016',100,2,2)
+insert into contrato values(5,'10-JUL-2015','10-JUL-2016',20,3,2)
+insert into contrato values(6,'11-AGO-2015','11-AGO-2016',60,4,1)
+insert into contrato values(7,'12-SET-2015','12-SET-2016',80,5,2)
+insert into contrato values(8,'01-JAN-2015','01-JAN-2016',150,6,3)
+insert into contrato values(9,'02-MAR-2015','02-MAR-2016',70,7,1)
+insert into contrato values(10,'03-JUN-2015','03-JUN-2016',100,8,2)
+insert into contrato values(11,'04-JAN-2015','04-JAN-2016',25,9,3)
+insert into contrato values(12,'05-JUL-2015','05-JUL-2016',50,10,1)
+
+Exercícios
+
+6-
+select distinct profissional.nome from profissional inner join contrato on profissional.n_controle = contrato.n_controle
+7-
+select distinct emp.nome from emp inner join contrato on emp.codigo = contrato.cod_emp
+8-
+select distinct emp.nome from emp inner join contrato on data_term <= '2015-12-31'
+9-
+select distinct profissional.nome from profissional inner join contrato on data_ini >= '2015-10-18'
+10-
+create view empresas_clientes as select nome, cnpj from emp
+11-
+create view nome_vigen as select  profissional.nome , contrato.data_ini, contrato.data_term from profissional inner join contrato on profissional.n_controle = contrato.n_controle

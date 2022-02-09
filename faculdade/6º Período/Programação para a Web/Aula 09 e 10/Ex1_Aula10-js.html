@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Introdução</title>
+	<head>
+	<body>
+		<h1 id="titulo">Vetor</h1>
+		<script>
+		var tam = prompt ("Quantas pessoas deseja calcular?");
+		var aux;
+		var peso = new Array();
+		var altura = new Array();
+		var imc = new Array();
+		var i;
+		for(i=0;i<tam;i++){
+			aux = prompt("Digite o peso da pessoa "+[i+1]+":");
+			peso.push(aux);
+			aux = prompt("Digite a altura da pessoa "+[i+1]+":");
+			altura.push(aux);
+			imc[i] = peso[i]/(altura[i]*altura[i])
+			imc.push(aux);
+		}
+		
+
+		for(i=0;i<tam;i++){
+			document.write("Peso da pessoa "+[i+1]+": <b>"+peso[i]+"</b> </br>");
+			document.write("Altura da pessoa "+[i+1]+": <b>"+altura[i]+"</b> </br>");
+			document.write("IMC da pessoa "+[i+1]+": <b>"+imc[i]+"</b> </br>");
+			if(imc[i] < 18.5 ){
+				document.write("Abaixo do Peso");
+			}else
+
+				if(imc[i] >= 18.6 && imc[i] < 25){
+					document.write("Peso Ideal");
+				}else
+					if(imc[i] >= 25 && imc[i] < 30){
+						document.write("Levemente acima do peso");
+					}else
+						if(imc[i] >= 30 && imc[i] < 35){
+							document.write("Obesidade I");
+						}else
+							if(imc[i] >= 35 && imc[i] < 40){
+								document.write("Obesidade II");
+							}else
+								if(imc[i] >= 40){
+									document.write("Obesidade Mórbida");
+								}else{}
+			document.write("</br></br>");
+		}
+
+
+		</script>	
+	</body>
+</html>

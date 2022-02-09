@@ -1,0 +1,23 @@
+Discente: Leonardo Matias Baldo.
+
+
+
+//1
+select curso.nome, instrutor.nome 
+from curso 
+join instrutor on instrutor.cod = curso.cod_instrutor;
+//2
+select curso.nome, materiais.nome 
+from curso 
+join materiais on curso.cod = materiais.cod_curso;
+//3
+select instrutor.nome, materiais.nome 
+from instrutor join curso join materiais on curso.cod = materiais.cod_curso on instrutor.cod = curso.cod_instrutor;
+//4
+select curso.nome, turma.nome 
+from curso join turma on curso.cod = turma.cod_curso;
+//5
+select instrutor.nome, turma.nome 
+from instrutor 
+join curso join turma on curso.cod = turma.cod_curso on instrutor.cod = curso.cod_instrutor;
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aula 03 - JavaScript</title>
+	<meta charset="utf-8" lang="">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<h1>Meu primeiro JavaScript</h1>
+
+<button type="button" onclick="hora()">
+	Clique aqui para exibir a data e hora.
+</button>
+<p id="demo2"></p>
+<h1>O que posso fazer no javascript?</h1>
+	<p id="demo"> O Javascript pode mudar conteúdo HTML.</p>
+	<button type="button" onclick='troca()'>Clique Aqui</button>
+
+
+
+<h1> O que posso fazer com JavaScript?</h1>
+<p>JavaScript pode mudar atributos.</p>
+<p>Neste caso Javascript muda o src (source) da imagem</p>
+
+	<button onclick="acende()" id="acende">Acender a Luz</button>
+	<img id="MinhaImagem" src="apagada.jpg" style="width:100px">
+	<button onclick="apaga()" id="apaga" disabled>Apagar a Luz</button>
+
+
+<h1>O que posso fazer com JavaScript?</h1>
+	<button type="button" onclick="muda()">Clique Aqui Para Mudar Tamanho</button>
+<p id='demo3'> JavaScript pode mudar o estilo(CSS) de elementos HTML</p>
+	
+<h1>Soma de 5+6 via js injetado</h1>
+<p id='soma'></p>
+<script>
+	document.getElementById("soma").innerHTML = 5+6;
+</script>
+
+<h1>Outra forma mais simples</h1>
+<script>
+	document.write(5+7);
+</script>
+
+<h1>Mais uma forma de somar pelo JS</h1>
+<button onclick="document.write(5+8)">Tente Aqui</button>
+
+<script>
+	window.alert(5+9);
+</script>
+
+</body>
+</html>

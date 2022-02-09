@@ -1,0 +1,82 @@
+Crie uma função que dado o número de minutos retorne o número de horas correspondente.
+create or replace function "horas"(minutos in NUMBER)
+return NUMBER
+Is hora NUMBER;
+begin
+  hora:=minutos/60;
+  return hora;
+end;
+select from horas(120) as HORAS from dual;
+
+Crie uma função que dado um salário retorne o número de salários mínimos que a pessoa ganha.
+create or replace function "quant_salarios"(salario in NUMBER)
+return NUMBER
+is res NUMBER;
+begin
+  res:=salario/788;
+  return res;
+end;
+select from quant_salarios(788) as SALARIO from dual;
+
+Implemente uma função que retorne o fatorial de um número inteiro.  
+create or replace function "calc_fatorial"(fat in NUMBER)
+return NUMBER
+is fatorial NUMBER;
+n NUMBER;
+begin
+fatorial:=1;
+n:=fat;
+ loop
+    fatorial:= fatorial*n;
+    exit when n=1;
+    n:=n-1;
+  end loop; 
+  return fatorial;
+  end;
+select from calc_fatorial(4) as FATORIAL from dual;
+ 
+Implemente uma função que retorne a média entre os valores inteiros entre o número 1 até o valor passado como inteiro;
+create or replace function "MEDIA_INT" (numero in NUMBER)
+return NUMBER 
+is 
+n NUMBER;
+soma NUMBER;
+res NUMBER;
+aux NUMBER;
+begin
+n:=numero;
+aux:=n;
+soma:=0;
+res:=0;
+    loop
+      soma:= soma+n;
+    exit when n=1;
+      n:=n-1;
+    end loop; 
+  res:= soma/aux;
+return res;
+end;   
+select from media_int(5) as MEDIA from dual;
+
+Suponha que a população do Brasil seja menor ...
+create or replace function "POPULACAO"(br_pop in NUMBER, fr_pop in NUMBER, ano_base in NUMBER)
+return NUMBER
+is
+pop_br NUMBER;
+pop_fr NUMBER;
+ano NUMBER;
+aux NUMBER;
+begin
+  pop_br:=br_pop;
+  pop_fr:=fr_pop;
+  ano:=ano_base;
+  aux:=ano_base; 
+    loop
+      pop_br:=pop_br*0.04;
+      pop_fr:=pop_fr*0.02;
+    exit when pop_br>pop_fr;
+      ano:=ano+1;
+    end loop;
+  return ano;
+end;
+select from populacao(100,400,2012) as POPULACAO_MAIOR from dual;  

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>HTML Template</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	crossorigin="anonymous">
+	
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<!-- Header -->
+	<header id="home">
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('lib/img/background1.jpg');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+
+		<!-- Nav -->
+		<nav id="nav" class="nav-transparent">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="index.html">
+							<img class="logo" src="lib/img/logo.png" alt="logo">
+							<img class="logo-alt" src="lib/img/logo-alt.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Collapse nav button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+
+				<!--  Main navigation  -->
+				<div class="container">
+				<ul class="main-nav nav">
+					<li>
+						<a href="#">Início </a>
+					</li>
+					
+
+					<li class="has-dropdown">
+						<a href="#blog">Genero</a>
+						<ul class="dropdown">
+							<li>
+								<a href="blog-single.html">Suspense</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Terror</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Drama</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Comedia</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Ação</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Animação</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="#blog">Filtrar</a>
+						<ul class="dropdown">
+							<li>
+								<a href="blog-single.html">Tendencia</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Popularidade</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Lançamentos</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Ano</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Alfabeto</a>
+							</li>
+							<li>
+								<a href="blog-single.html">Classificação Indicativa</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="#blog">Login</a>
+						<ul class="dropdown">
+							<div class="row">
+								<div class="col-md-6 col-md-offset-3">
+									<div class="panel panel-login">
+										<div class="panel-heading">
+											<div class="row">
+												<div class="col-xs-6">
+													<a href="#" class="active" id="login-form-link">Entrar</a>
+												</div>
+												<div class="col-xs-6">
+													<a href="#" id="register-form-link">Registrar</a>
+												</div>
+											</div>
+											<hr>
+										</div>
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-lg-12">
+													<form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+														<div class="form-group">
+															<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuário" value="">
+														</div>
+														<div class="form-group">
+															<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Senha">
+														</div>
+														<div class="form-group text-center">
+															<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+															<label for="remember"> Lembrar</label>
+														</div>
+														<div class="form-group">
+															<div class="row">
+																<div class="col-sm-6 col-sm-offset-3">
+																	<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Entrar">
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="row">
+																<div class="col-lg-12">
+																	<div class="text-center">
+																		<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Esqueceu a senha?</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</form>
+													<form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+														<a> Registre ou mude sua senha na loja fisica!</a>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</ul>
+					</li>
+					<li class="serach">
+						<form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="text" placeholder="Search">
+							<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<!-- /Main navigation -->
+		</nav>
+		<!-- /Nav -->
+		<div>
+			<!-- Page Content -->
+			<div class="container">
+				
+					  <!-- Heading Row -->
+					  <div class="row my-4">
+						<div class="col-lg-8">
+						  <img class="img-fluid rounded" src="./lib/img/Cinquenta_Tons2.jpg" alt="">
+						</div>
+						<!-- /.col-lg-8 -->
+						<div class="col-lg-4">
+						  <h1>Cinquenta tons de cinza</h1>
+						  <p class="text-white">Ela era virgem. Ele era experiente até demais. Foi uma experiência dolorosa, mas às vezes a dor de amor não dói.</p>
+						  <p class="text-white">Estrelando: Dakora Johnson, Jamie Dornan, Rita Ora, Luke Grimes</p>
+						  <p class="text-white">Direção de Sam Taylor-Wood</p>
+						  <a class="btn btn-danger btn-lg" href="#">Alugar</a>
+						</div>
+						<!-- /.col-md-4 -->
+					  </div>
+					  <!-- /.row -->
+				
+					  <!-- Call to Action Well -->
+					  <div class="card text-white bg-secondary my-4 text-center">
+						<div class="row card-body">
+						  <p class="text-white m-auto">Genero: Romance Erótico </p>
+						  <p class="text-white m-auto"> Duração: 135min </p>
+						  <p class="text-white m-auto"> Ano: 2013</p>
+						  <p class="text-white m-auto"> Classificação: 18</p>
+						</div>
+					  </div>
+			</div>
+		</div>
+		<footer>
+			<div class="row row-cinza-claro">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-1 text-center">
+							<img class="logotipo" src="lib/img/logo-footer.png" alt="Logotipo">
+						</div>
+						<div class="col-md-11">
+							<div class="row row-cols">
+								<div class="col-md-3 col-popular-post">
+									<h4>PERGUNTAS FREQUENTES</h4>
+									<ul class="list-unstyled">
+										<li>
+											<a href="#">> Preço</a>
+										</li>
+										<li>
+											<a href="#">> Prazo</a>
+										</li>
+										<li>
+											<a href="#">> Multa</a>
+										</li>
+									</ul>
+									<!-- Faz um pop up, qualquer coisa com um lorem ipsum memo !-->
+								</div>
+								<div class="col-md-5 col-links">
+									<h4>DEIXE SUA MENSAGEM</h4>
+									<ul class="list-unstyled">
+										<li>
+											<td>
+												<input class="form-control mr-sm-2" type="text-area" name="nome">
+											</td>
+										</li>
+											<td width="200px">
+												<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Enviar</button>
+											</td>
+									<!-- Aumentar a area de texto, dar design ao botão e alinhar ele pra direita !-->
+									</ul>
+								</div>
+								<div class="col-md-4 col-get-touch">
+									<h4>CONTATOS</h4>
+									<address>
+										<i class="fa fa-map-marker"></i>
+										<span>Rua Mário Palmério, 1000.
+											<br/>Frutal, Minas Gerais.</span>
+									</address>
+									<p>
+										<a href="tel:34210000">
+											<i class="fa fa-phone"></i> 3421-0000</a>
+									</p>
+									<ul class="list-unstyled list-socials">
+										<li>
+											<a href="#" target="_blank">
+												<i class="fa fa-facebook"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" target="_blank">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" target="_blank">
+												<i class="fa fa-instagram"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" target="_blank">
+												<i class="fa fa-pinterest-p"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-cinza-escuro">
+				<div class="container">
+
+					<p class="pull-left">Copyright © Carlos, Deyvid, Leopoldo, Lorenna.</p>
+					<p class="pull-right text-roxo">Tópicos Avançados em Sistemas de Informação</p>
+
+				</div>
+			</div>
+		</footer>
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

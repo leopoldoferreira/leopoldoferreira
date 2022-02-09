@@ -1,0 +1,19 @@
+create or replace PROCEDURE ListaProd is CURSOR c_prod is select * from produto;
+produto_prod produto%ROWTYPE;
+media NUMBER;
+begin 
+  select avg(PCOVDAPRODUTO)into media from produto;
+  DBMS_OUTPUT.PUT_LINE('Média=' || to_char(media));
+  DBMS_OUTPUT.PUT_LINE('Lista de PRodutos');
+  open c_prod;
+  loop
+    fetch c_prod into produto_prod;
+    exit when c_prod%NOTFOUND;
+    if produto_prod.PCOVDAPRODUTO > 10 then
+          DBMS_OUTPUT.PUT_LINE(produto_prod.nomproduto || ' - '|| 'produto maior ou igual a média');
+    else
+        DBMS_OUTPUT.PUT_LINE(produto_prod.nomproduto || ' - '|| 'produto menor que a média');
+    end if;
+  end loop;
+  close c_prod;
+end ListaProd;

@@ -1,0 +1,99 @@
+
+dados <- read.table("C:/Users/Leopo/Desktop/dados_4.txt", header = T)
+attach(dados)
+
+#Variáveis:  EstadoCivil  GrauInstrução   RegiãoProcedencia    Salário      Idade     Filhos
+#Classificação:  Nominal        Ordinal             Nominal   Contínua   Discreta   Discreta
+
+#----------------------------------------Tabelas de Frequência----------------------------------------
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável EstadoCivil
+data.frame(Absoluta = c(table(EstadoCivil)),Proporcao = c(prop.table(table(EstadoCivil))),Relativa= c(prop.table(table(EstadoCivil))*100))
+#RESULTADO:
+         Absoluta Proporcao Relativa
+Casado         25 0.5434783 54.34783
+Solteiro       21 0.4565217 45.65217
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável GrauInstrução
+data.frame(Absoluta = c(table(GrauInstrução)),Proporcao = c(prop.table(table(GrauInstrução))),Relativa=  c(prop.table(table(GrauInstrução))*100))
+#RESULTADO:
+            Absoluta Proporcao Relativa
+Fundamental       18 0.3913043 39.13043
+Médio             22 0.4782609 47.82609
+Superior           6 0.1304348 13.04348
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável RegiãoProcedencia
+data.frame(Absoluta = c(table(RegiãoProcedencia )),Proporcao = c(prop.table(table(RegiãoProcedencia))),Relativa=  c(prop.table(table(RegiãoProcedencia))*100))
+#RESULTADO:
+         Absoluta Proporcao Relativa
+Capital        17 0.3695652 36.95652
+Interior       22 0.4782609 47.82609
+Outras          7 0.1521739 15.21739
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável Salário
+#RESULTADO:
+table(cut(Salário, breaks=seq(978,1023,9), right=TRUE))
+(978,987] (987,996] (996,1005] (1005,1014] (1014,1023] 
+    3        12        14          14           3
+//AQUI SÓ TEM FREQUENCIA ABSOLUTA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável Idade
+table(cut(Idade, breaks=seq(10,35,5), right=TRUE))
+#RESULTADO:
+(10,15] (15,20] (20,25] (25,30] (30,35] 
+      1       6      20      15       4 
+//AQUI SÓ TEM FREQUENCIA ABSOLUTA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#A Seguir cálculo e exibição da Frequência Absoluta, Proporção e Frequência Relativa da variável Filhos
+data.frame(Absoluta = c(table(Filhos)),Proporcao = c(prop.table(table(Filhos))),Relativa=  c(prop.table(table(Filhos))*100))
+#RESULTADO:
+  Absoluta  Proporcao  Relativa
+0       12 0.26086957 26.086957
+1       16 0.34782609 34.782609
+2       14 0.30434783 30.434783
+3        4 0.08695652  8.695652
+
+#----------------------------------------Medidas Resumo de Posição----------------------------------------
+
+#A Seguir cálculo e exibição da Média e Mediana das Variáveis Salário, Idade e Filhos. 
+#sendo 1, = Media
+#e 2, = Mediana 
+matrix(c(mean (Salário), mean(Filhos), mean(Idade), meadian(Salário), median(Filhos), median(Idade)), 2, 3)
+#RESULTADO:
+
+//NO MEU NÃO RODA POR CAUSA DA BUCETA DO SALÁRIO.
+
+#----------------------------------------Medidas Resumo de Dispersão----------------------------------------
+
+#A Seguir cálculo e exibição da Variância e Desvio Padrão das Variáveis Salário, Idade e Filhos.
+#sendo 1, = Variância
+#e 2, = Desvio padrão
+matrix(c(var(Salário), var(Filhos), var(Idade), sd(Salário), sd(Filhos), sd(Idade)), 3,2)
+#RESULTADO:
+
+//NO MEU NÃO RODA POR CAUSA DA BUCETA DO SALÁRIO.
+
+#----------------------------------------Tabelas de Frequência Bidimensional----------------------------------------
+
+#A Seguir cálculo e exibição da tabela de frequência ABSOLUTA de uma análise bidimensional entre RegiãoProcedencia e GrauInstrução.
+table(RegiãoProcedencia, GrauInstrução, colSums(RegiãoProcedencia, GrauInstrução))
+#RESULTADO:
+                 GrauInstrução
+RegiãoProcedencia Fundamental Médio Superior
+         Capital            6     9        2
+         Interior           7    12        3
+         Outras             5     1        1
+
+#A Seguir cálculo e exibição da tabela de frequência RELATIVA de uma análise bidimensional entre RegiãoProcedencia e GrauInstrução.
+
+#RESULTADO:
+
+
+
+#A Seguir cálculo e exibição da tabela de COEFICIENTE DE CONTINGÊNCIA de uma análise bidimensional entre RegiãoProcedencia e GrauInstrução.
+
+#RESULTADO:
+
+
+
+

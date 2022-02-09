@@ -1,0 +1,529 @@
+<html>
+
+<head>
+	<title>Processamento Digital de Imagens</title>
+		
+	<link rel="stylesheet" type = "text/css" href="_css/estilo.css"/>
+	
+<head>
+<body>
+<div id="interface">
+	<nav id="menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+
+			<li>Submenu
+				<ul>
+					<li><a href="sub1.html">Sub1</a></li>
+					<li><a href="sub2.html"></a></li>
+					<li><a href="sub3.html"></a></li>
+				</ul>
+			</li>
+
+			<li><a href="#links">Links</a></li>
+			<li><a href="sobre.html">Sobre</a></li>
+			<li><a href="mailto:seuemail@site.com.br">Contato</a></li>
+		</ul>
+	</nav>	
+
+
+<div id="links">
+Links Relacionados: <br>
+<a href="http://wiki.icmc.usp.br/images/5/5e/DIP_02_Realce_p1.pdf"> MATERIAL REALCE IMAGENS USP</a>
+</div>
+
+
+<b><h1>Processamento Digital de Imagens</h1></b></br>
+</br>
+Por processamento digital de imagens entendem-se a análise e a manipulação de imagens por computador. A finalidade deste pro&shy;cessamento é:<br/>
+•	extrair informação da imagem<br/>
+•	transformar a imagem (por exemplo, aumentar contraste, realçar bordas) de tal modo que a informação seja mais facilmente  discernível por um analista humano.<br/>
+<br/>
+Na análise de imagens, a entrada do processamento é uma imagem, enquanto a saída é uma “descrição” (não-pictórica) da imagem. Este processo pode ser entendido como de redução de dados em que se diminui o volume de dados mantendo o conteúdo de informação relevante para uma dada aplicação.<br/>
+<br/>
+<h3>Imagem</h3>
+Matematicamente, pode-se definir uma imagem como função I(x,y), em uma certa região. Para a maioria das imagens, a região de definição é um subconjunto limitado do plano, e os valores assumidos pela função são números reais limitados e não-negativos. Este modelo matemático é útil, por exemplo para descrever imagens visuais, onde esta função mede, de alguma forma, a energia refletida por objetos e captada por um sistema de imageamento.<br/>
+Por comodidade, assume-se 	que a imagem é definida num retângulo [0, r] x [0, s] e os valores tomados estão contidos no intervalo [0, t]. <br/>
+Ao valor I(x,y) da imagem no ponto (x,y) dá-se o nome de nível de cinza.<br/>
+<br/>
+<figure class="figura-legenda">
+<img src="_imagens/zebra.jpg" width="50" title="Zebra"><br/>
+<figcaption><h2>Zebra</h2></figcaption><br/>
+</figure>
+Imagem Digital ou Discreta: é aquela onde a função só é definida numa grade regular de pontos da forma (m.dx,n.dy), dx e dey são intervalos nas direções x e y, e (m,n) são inteiros nos intervalos [0, M-1] e [0,N-1]. Os valores assumidos nestes pontos são também múltiplos de uma dada quantidade dz, ou seja, da forma k.dz, onde k está no intervalo [0,K-1].<br/>
+<br/>
+<img src="_imagens/borrada1.jpg"  alt="default"><br/>
+ <br/>
+Uma imagem digital pode ser obtida a partir de uma imagem não-digital (“contínua”) através de um processo que envolve dois passos:<br/>
+•	amostragem: consiste em discretizar o domínio de definição da imgaem, ou seja, escolher os valores dx e dy da grade. <br/>
+•	quantização: consiste em escolher um valor múltiplo de dz para a imaem em cada ponto (m.dx, n.dy)<br/>
+<br/>
+Portanto,<br/>
+Amostragem (sampling): digitalização em termos de coordenadas espaciais<br/>
+Quantização: Digitalização em termos de intensidade de cor.<br/>
+<br/>
+Uma imagem digital pode ser representada por uma matriz de pontos com N linhas e M colunas<br/>
+ <img src="_imagens/matriz.jpg"  alt="matriz"><br/>
+<br/>
+Obs. Uma imagem com 2 níveis de cinza é chamada de imagem binária.<br/>
+<br/>
+Vantagem de imagens binárias:<br/>
+•	fáceis de serem obtidas<br/>
+•	ocupam menos espaço de armazenamento<br/>
+•	podem ser manipuladas através de operadores lógicos<br/>
+<br/>
+<br/>
+<br/>
+Convencões:<br/>
+<img src="_imagens/grafico1.jpg"  alt="gráfico"><br/>
+<h2>Vizinhança:</h2>
+Dado um ponto p(x,y) da imagem os “vizinhos de p (vizinhança de p)” são os pontos mais próximos de P.<br/>
+<b>Vizinhança de 4 (vizinhos-4):</b><br/>
+	V4		V1 = (x-1, y)<br/>
+V2 = (x+1, y)<br/>
+V3 = (x, y+1)<br/>
+V4 = (x, y-1)<br/>
+V1	P	V¬2	<br/>
+	V3		<br/>
+<br/>
+<br/>
+<b>Vizinhança de 8 (vizinhos-8):</b><br/>
+V5	V4	V6	V5 = (x-1, y-1)<br/>
+V6 = (x+1, y-1)<br/>
+V7 = (x-1, y+1)<br/>
+V8 = (x+1, y+1)<br/>
+V1	P	V¬2	<br/>
+V7	V3	V¬8	<br/>
+<br/>
+Distância entre P e seus vizinhos-4 = 1<br/>
+Distância entre P e seus vizinhos-8 =  <br/>
+<br/>
+<h3>Manipulação de Imagens:</h3><br>
+
+H Realce (enhancement) da Imagem<br>
+	<p>Acentuar as características da imagem para subseqüente análise ou mesmo
+	apresentação visual.<br>
+	Exemplo: Delimitação de bordas, manipulação de contraste, filtragens, aguçar a
+	imagem.</p>
+
+H Restauração da Imagem<br>
+	<p>Remover ou minimizar degradações de causas conhecidas presentes na imagem.</p>
+
+H Análise de Imagem<br>
+	<p>Preocupa-se em efetuar medidas quantitativas em uma imagem, gerando uma
+	descrição dela.</p>
+
+H Reconstruir a Imagem a partir de projeções<br>
+	<p>É uma classe especial do problema de restauração, onde um objeto 2D (ou<br>
+	dimensões maiores) é reconstruído a partir de várias projeções 1D</p>
+
+
+H Compressão de Imagens<br>
+	<p>Redução do número de bits necessários a se armazenar ou transmitir uma<br>
+	imagem, sem perda (considerável) de informação.</p>
+
+H Histograma de Intensidade<br>	
+<p>Indica-se para cada nível de cinza da imagem quantidade de pontos mapeados com tal<br>
+ nível. Indica a probabilidade condicional p (z/objeto) de um ponto possuir um dado<br>
+ nível de cinza z, sendo que este ponto pertence ao objeto.</p>	
+ 
+
+<h2>Paradigma de abstração para imagens</h2><br>
+ <img src="_Imagens/Imagem6.png" > <br>
+ 
+<h3>A representação Matricial</h3><br>
+
+O número de linhas m da matriz é chamada <span style="text-decoration: underline">resolução vertical </span> da imagem.<br>
+O número de colunas n da matriz é chamada de <span style="text-decoration: underline">resolução horizontal </span> da matriz<br>
+<span style="text-decoration: underline">Resolução espacial </span> ou geométrica ao produto <i>mxn</i> da resolução vertical pela resolução<br>
+ horizontal.<br>
+
+<span style="text-decoration: underline">A resolução espacial </span> espacial estabelece a freqüência de amostragem final da imagem.<br>
+Resolução em termos absolutos – não fornece dados confiáveis<br>
+Medida mais confiável: densidade de resolução da imagem: número de pixels por<br>
+ unidade linear de medida. Em geral, utiliza-se pixels por polegadas <i>ppi</i> (pixels per inch)<br>
+ ou dpi (dots per inch).<br>
+
+<span style="text-decoration: underline">Resolução de cor: </span> número de bits utilizado para armazenar o vetor cor de cada imagem.<br>
+<span style="text-decoration: underline">Gamute de uma imagem digital: </span> é o conjunto das cores do espaço de cor quantizado da imagem.<br>
+
+Geometria do Pixel:<br>
+Considere uma Imagem digital e sua representação matricial<br>
+O reticulado define na realidade uma malha poligonal uniforme de retângulos do plano.<br>
+
+Pixel Geométrico: cada polígono na malha poligonal<br>
+<img src="_Imagens/Imagem7.png" > <br>
+
+Além da representação matricial podemos utilizar outras representações para uma<br>
+ imagem discretizada espacialmente. Neste caso a geometria do pixel pode não ser<br>
+ retangular. Observe a utilização de um pixel hexagonal.<br>
+
+<img src="_Imagens/Imagem8.png" > <br>
+
+
+
+
+<h3>Quantização</h3><br>
+
+Pelo processo de quantização uma imagem com tons contínuos é convertida numa com<br>
+ tons discretos. Para armazenamento ou transmissão, cada tom é representado por um<br>
+ código binário. <br>
+Por que quantizar uma imagem? Existem duas motivações básicas que justificam a<br>
+ importância do problema de quantizar uma imagem: exibição e compressão<br>
+•	Exibição de imagens: Para exibir uma imagem em um dispositivo gráfico, o gamute<br>
+ de cor da imagem não pode ser maior do que as cores disponíveis no espaço físico<br>
+ de cor do equipamento.<br>
+•	compressão de imagens: a quantização de uma imagem, permite uma redução do<br>
+ número de bits utilizado para armazenar o seu gamute de cores. Reduzimos desse<br>
+ modo o espaço necessário para o armazenamento da imagem, e diminuímos o<br>
+ volume de dados no caso de transmissão da imagem através de algum canal de<br>
+ comunicação.<br>
+
+
+
+<p>Quantização para um espaço de 1 bit, 2 tons de cinza ou gamute com 2 cores, determina<br>
+ uma partição do espaço de inicial de cores em 2 conjuntos. Em cada um dos conjuntos a<br>
+ função de quantização assumes valores constantes. Isto de fato acontece.</p>
+
+Seja <br>
+<p>C o conjunto de cores.<br>
+	C’ o conjunto de cores quantizada<br>
+	ci’ a cor quantizada</p><br>
+
+Cada partição do conjunto de C é chamada de célula de quantização<br>
+Em cada célula a função de quantização recebe um valor constante c’ chamado nível de<br>
+ quantização.<br>
+
+Método geral de quantização<br>
+O processo de quantização de um espaço de cor consiste de duas etapas<br>
+•	Determinar as células de quantização<br>
+•	Determinar o nível de quantização de cada célula<br>
+
+A função de quantização q é então definida de forma a associar às cores de uma célula,<br>
+ o nível de quantização correspondente. A função q  é portanto constante em cada célula<br>
+ de quantização. Uma vez conhecida a transformação de quantização q do espaço de cor,<br>
+ o o processo de quantizar uma imagem se torna uma tarefa simples:<br>
+-	para cada cor c do pixel na imagem original, identifica-se a célula de quantização a<br>
+ que ela pertence, e substituímos a cor c pelo valor de quantização q(c), da célula.<br>
+
+Os diferentes métodos de quantização existentes, refletem a descrição acima, e<br>
+ funcionam de três modos distintos:<br>
+•	determinamos inicialmente as células de quantização, e em seguida calculamos o<br>
+ nível de quantização de cada célula.<br>
+•	Determinamos inicialmente os níveis de quantização, e em seguida determinamos as<br>
+ cores que devem ser quantizadas para cada nível<br>
+•	Determinamos de forma interdependente e simultânea as células e os níveis  de<br>
+ quantização.<br>
+
+
+<h3>Quantização uniforme e adaptativa</h3>
+Como determinar a célula de quantização?<br>
+Uma escolha natural e simples consiste em dividir o espaço de cor em células<br>
+ congruentes e em cada célula, tomar o seu centro como nível de quantização associado.<br>
+ Este método é chamado de quantização uniforme.<br>
+
+No caso de quantização escalar com L níveis, as células de quantização são intervalos<br>
+(ci-1,ci] de igual comprimento, isto é, ci-ci-1 = constante, e em cada célula o valor de<br>
+ quantização é dado pela média:<br>
+ <img src="_Imagens/Imagem9.png" > <br>
+
+<p>Se o espaço de cor é o cubo RGB, e utilizamos quantização uniforme em cada uma das<br>
+ componentes de cor, as células de quantização são cubos no espaço de cor, e em cada<br>
+ cubo, o valor de quantização é dado pela cor no centro do cubo. Para o caso<br>
+ bidimensional observe o exemplo abaixo: onde a figura (a) representa  as células de<br>
+ quantização para o caso bidimensional com geometria do pixel retangular, e figura (b)<br>
+ ilustra uma outra de forma de geometria hexagonal.<p>
+
+
+
+
+
+
+
+
+
+
+Apesar de que a quantização uniforme é fácil de ser obtida, sua utilização pode não ser a<br>
+ mais recomendada. Basta observar que nesse método algumas células de quantização<br>
+ podem nem sequer possuir cores existentes no gamute da imagem.<br>
+Suponha que os valores de cor da imagem não estão uniformemente distribuídos  e que,<br>
+ portanto, certas cores contidas em uma região do espaço de cor ocorrem na imagem<br>
+ com uma freqüência maior do que as outras cores. Se subdividirmos esta região em um<br>
+ número maior de células de quantização, estaremos diminuindo o tamanho das células, e<br>
+ portanto, haverá uma diminuição do erro de quantização dos elementos da imagem que<br>
+ possuem aquelas cores. Como essas cores ocorrem em um grande números, estamos<br>
+ conseqüentemente, minimizando a diferença entre a imagem original e a quantizada.<br>
+Um método de quantização que não utiliza um particionamento do espaço de cor em<br>
+ células congruentes é chamado de quantização não-uniforme. A quantização uniforme é<br>
+ dita adaptativa quanto a geometria da células é escolhida de acordo com características<br>
+ da distribuição de cor na imagem.<br>
+
+<h3>Métodos adaptativos de quantização</h3>
+Os métodos desta classe podem ser descritos em duas etapas:<br>
+1.	é feita uma estimativa das propriedades estatísticas relevantes da imagem.<br> 
+2.	aplica-se o método geral de quantização, particionado-se o espaço de cor com base<br>
+ nos dados obtidos na fase anterior.<br>
+
+Portanto, devemos inicialmente construir um histograma de freqüência da imagem que<br>
+ nos dá uma aproximação da distribuição de probabilidade das cores na imagem e depois<br>
+ decidirmos qual método de quantização adaptativo utilizar:<br>
+
+
+<h3>Quantização por Seleção direta</h3>
+O método de seleção direta escolhe, inicialmente, com base em propriedades estatísticas<br>
+ da imagem, os níveis de quantização a serem utilizados e a partir daí determina a função<br>
+ de quantização a função de quantização de forma a minimizar o erro de quantização.<br>
+ Um exemplo é o algoritmo de populosidade.<br>
+
+Algoritmo de populosidade. Esse método constrói inicialmente o histograma de<br>
+ freqüência  da imagem e, em seguida escolhe para os K níveis de quantização as K<br>
+ cores que ocorrem com mais freqüência no gamute e cores (cores mais populosas).<br>
+Um problema deste método está em ignorar totalmente cores em regiões de baixa<br>
+ densidade do espaço de cor (ex. um highlight em uma imagem pode desaparecer<br>
+ completamente nesse processo de quantização, uma vez que ele ocupa apenas um<br>
+ pequeno número de pixels na imagem). <br>
+Este algoritmo pode ser utilizado com resultados satisfatórios, para imagens que<br>
+ apresentem distribuição uniforme de cor.<br>
+
+
+
+ <h2>Teoria da Amostragem</h2>
+ <img src="_Imagens/Imagem11.png" > <br>
+ <img src="_Imagens/Imagem12.png" > <br>
+<h3>Manipulação de Imagens:</h3><br>
+
+H Realce (enhancement) da Imagem<br>
+	<p>Acentuar as características da imagem para subseqüente análise ou mesmo
+	apresentação visual.<br>
+	Exemplo: Delimitação de bordas, manipulação de contraste, filtragens, aguçar a
+	imagem.</p>
+
+H Restauração da Imagem<br>
+	<p>Remover ou minimizar degradações de causas conhecidas presentes na imagem.</p>
+
+H Análise de Imagem<br>
+	<p>Preocupa-se em efetuar medidas quantitativas em uma imagem, gerando uma
+	descrição dela.</p>
+
+H Reconstruir a Imagem a partir de projeções<br>
+	<p>É uma classe especial do problema de restauração, onde um objeto 2D (ou<br>
+	dimensões maiores) é reconstruído a partir de várias projeções 1D</p>
+
+
+H Compressão de Imagens<br>
+	<p>Redução do número de bits necessários a se armazenar ou transmitir uma<br>
+	imagem, sem perda (considerável) de informação.</p>
+
+H Histograma de Intensidade<br>	
+<p>Indica-se para cada nível de cinza da imagem quantidade de pontos mapeados com tal<br>
+ nível. Indica a probabilidade condicional p (z/objeto) de um ponto possuir um dado<br>
+ nível de cinza z, sendo que este ponto pertence ao objeto.</p>	
+ 
+
+<h2>Paradigma de abstração para imagens</h2><br>
+ <img src="_Imagens/Imagem6.png" > <br>
+ 
+<h3>A representação Matricial</h3><br>
+
+O número de linhas m da matriz é chamada <span style="text-decoration: underline">resolução vertical </span> da imagem.<br>
+O número de colunas n da matriz é chamada de <span style="text-decoration: underline">resolução horizontal </span> da matriz<br>
+<span style="text-decoration: underline">Resolução espacial </span> ou geométrica ao produto <i>mxn</i> da resolução vertical pela resolução<br>
+ horizontal.<br>
+
+<span style="text-decoration: underline">A resolução espacial </span> espacial estabelece a freqüência de amostragem final da imagem.<br>
+Resolução em termos absolutos – não fornece dados confiáveis<br>
+Medida mais confiável: densidade de resolução da imagem: número de pixels por<br>
+ unidade linear de medida. Em geral, utiliza-se pixels por polegadas <i>ppi</i> (pixels per inch)<br>
+ ou dpi (dots per inch).<br>
+
+<span style="text-decoration: underline">Resolução de cor: </span> número de bits utilizado para armazenar o vetor cor de cada imagem.<br>
+<span style="text-decoration: underline">Gamute de uma imagem digital: </span> é o conjunto das cores do espaço de cor quantizado da imagem.<br>
+
+Geometria do Pixel:<br>
+Considere uma Imagem digital e sua representação matricial<br>
+O reticulado define na realidade uma malha poligonal uniforme de retângulos do plano.<br>
+
+Pixel Geométrico: cada polígono na malha poligonal<br>
+<img src="_Imagens/Imagem7.png" > <br>
+
+Além da representação matricial podemos utilizar outras representações para uma<br>
+ imagem discretizada espacialmente. Neste caso a geometria do pixel pode não ser<br>
+ retangular. Observe a utilização de um pixel hexagonal.<br>
+
+<img src="_Imagens/Imagem8.png" > <br>
+
+
+
+
+<h3>Quantização</h3><br>
+
+Pelo processo de quantização uma imagem com tons contínuos é convertida numa com<br>
+ tons discretos. Para armazenamento ou transmissão, cada tom é representado por um<br>
+ código binário. <br>
+Por que quantizar uma imagem? Existem duas motivações básicas que justificam a<br>
+ importância do problema de quantizar uma imagem: exibição e compressão<br>
+•	Exibição de imagens: Para exibir uma imagem em um dispositivo gráfico, o gamute<br>
+ de cor da imagem não pode ser maior do que as cores disponíveis no espaço físico<br>
+ de cor do equipamento.<br>
+•	compressão de imagens: a quantização de uma imagem, permite uma redução do<br>
+ número de bits utilizado para armazenar o seu gamute de cores. Reduzimos desse<br>
+ modo o espaço necessário para o armazenamento da imagem, e diminuímos o<br>
+ volume de dados no caso de transmissão da imagem através de algum canal de<br>
+ comunicação.<br>
+
+
+
+<p>Quantização para um espaço de 1 bit, 2 tons de cinza ou gamute com 2 cores, determina<br>
+ uma partição do espaço de inicial de cores em 2 conjuntos. Em cada um dos conjuntos a<br>
+ função de quantização assumes valores constantes. Isto de fato acontece.</p>
+
+Seja <br>
+<p>C o conjunto de cores.<br>
+	C’ o conjunto de cores quantizada<br>
+	ci’ a cor quantizada</p><br>
+
+Cada partição do conjunto de C é chamada de célula de quantização<br>
+Em cada célula a função de quantização recebe um valor constante c’ chamado nível de<br>
+ quantização.<br>
+
+Método geral de quantização<br>
+O processo de quantização de um espaço de cor consiste de duas etapas<br>
+•	Determinar as células de quantização<br>
+•	Determinar o nível de quantização de cada célula<br>
+
+A função de quantização q é então definida de forma a associar às cores de uma célula,<br>
+ o nível de quantização correspondente. A função q  é portanto constante em cada célula<br>
+ de quantização. Uma vez conhecida a transformação de quantização q do espaço de cor,<br>
+ o o processo de quantizar uma imagem se torna uma tarefa simples:<br>
+-	para cada cor c do pixel na imagem original, identifica-se a célula de quantização a<br>
+ que ela pertence, e substituímos a cor c pelo valor de quantização q(c), da célula.<br>
+
+Os diferentes métodos de quantização existentes, refletem a descrição acima, e<br>
+ funcionam de três modos distintos:<br>
+•	determinamos inicialmente as células de quantização, e em seguida calculamos o<br>
+ nível de quantização de cada célula.<br>
+•	Determinamos inicialmente os níveis de quantização, e em seguida determinamos as<br>
+ cores que devem ser quantizadas para cada nível<br>
+•	Determinamos de forma interdependente e simultânea as células e os níveis  de<br>
+ quantização.<br>
+
+
+<h3>Quantização uniforme e adaptativa</h3>
+Como determinar a célula de quantização?<br>
+Uma escolha natural e simples consiste em dividir o espaço de cor em células<br>
+ congruentes e em cada célula, tomar o seu centro como nível de quantização associado.<br>
+ Este método é chamado de quantização uniforme.<br>
+
+No caso de quantização escalar com L níveis, as células de quantização são intervalos<br>
+(ci-1,ci] de igual comprimento, isto é, ci-ci-1 = constante, e em cada célula o valor de<br>
+ quantização é dado pela média:<br>
+ <img src="_Imagens/Imagem9.png" > <br>
+
+<p>Se o espaço de cor é o cubo RGB, e utilizamos quantização uniforme em cada uma das<br>
+ componentes de cor, as células de quantização são cubos no espaço de cor, e em cada<br>
+ cubo, o valor de quantização é dado pela cor no centro do cubo. Para o caso<br>
+ bidimensional observe o exemplo abaixo: onde a figura (a) representa  as células de<br>
+ quantização para o caso bidimensional com geometria do pixel retangular, e figura (b)<br>
+ ilustra uma outra de forma de geometria hexagonal.<p>
+
+
+
+
+
+
+
+
+
+
+Apesar de que a quantização uniforme é fácil de ser obtida, sua utilização pode não ser a<br>
+ mais recomendada. Basta observar que nesse método algumas células de quantização<br>
+ podem nem sequer possuir cores existentes no gamute da imagem.<br>
+Suponha que os valores de cor da imagem não estão uniformemente distribuídos  e que,<br>
+ portanto, certas cores contidas em uma região do espaço de cor ocorrem na imagem<br>
+ com uma freqüência maior do que as outras cores. Se subdividirmos esta região em um<br>
+ número maior de células de quantização, estaremos diminuindo o tamanho das células, e<br>
+ portanto, haverá uma diminuição do erro de quantização dos elementos da imagem que<br>
+ possuem aquelas cores. Como essas cores ocorrem em um grande números, estamos<br>
+ conseqüentemente, minimizando a diferença entre a imagem original e a quantizada.<br>
+Um método de quantização que não utiliza um particionamento do espaço de cor em<br>
+ células congruentes é chamado de quantização não-uniforme. A quantização uniforme é<br>
+ dita adaptativa quanto a geometria da células é escolhida de acordo com características<br>
+ da distribuição de cor na imagem.<br>
+
+<h3>Métodos adaptativos de quantização</h3>
+Os métodos desta classe podem ser descritos em duas etapas:<br>
+1.	é feita uma estimativa das propriedades estatísticas relevantes da imagem.<br> 
+2.	aplica-se o método geral de quantização, particionado-se o espaço de cor com base<br>
+ nos dados obtidos na fase anterior.<br>
+
+Portanto, devemos inicialmente construir um histograma de freqüência da imagem que<br>
+ nos dá uma aproximação da distribuição de probabilidade das cores na imagem e depois<br>
+ decidirmos qual método de quantização adaptativo utilizar:<br>
+
+
+<h3>Quantização por Seleção direta</h3>
+O método de seleção direta escolhe, inicialmente, com base em propriedades estatísticas<br>
+ da imagem, os níveis de quantização a serem utilizados e a partir daí determina a função<br>
+ de quantização a função de quantização de forma a minimizar o erro de quantização.<br>
+ Um exemplo é o algoritmo de populosidade.<br>
+
+Algoritmo de populosidade. Esse método constrói inicialmente o histograma de<br>
+ freqüência  da imagem e, em seguida escolhe para os K níveis de quantização as K<br>
+ cores que ocorrem com mais freqüência no gamute e cores (cores mais populosas).<br>
+Um problema deste método está em ignorar totalmente cores em regiões de baixa<br>
+ densidade do espaço de cor (ex. um highlight em uma imagem pode desaparecer<br>
+ completamente nesse processo de quantização, uma vez que ele ocupa apenas um<br>
+ pequeno número de pixels na imagem). <br>
+Este algoritmo pode ser utilizado com resultados satisfatórios, para imagens que<br>
+ apresentem distribuição uniforme de cor.<br>
+
+
+
+ <h2>Teoria da Amostragem</h2>
+ <img src="_Imagens/Imagem11.png" > <br>
+ <img src="_Imagens/Imagem12.png" > <br>
+Cada valor f(ui) é chamado amostra do sinal<br>
+A seqüência mostrada na equação 1 é chamada de seqüência de amostras.<br>
+
+
+<h3>Amostragem Pontual Uniforme</h3>
+Conceito de reticulado<br>
+Cada ponto no reticulado é chamado de vértice do reticulado<br>
+A amostragem pontual é uniforme quando o conjunto de pontos ui são vértices de um<br>
+ reticulado do espaço. <br>
+Número de amostras por unidade de espaço é chamado de taxa de amostragem ou<br>
+ freqüência de amostragem.<br>
+
+<h2>Reconstrução de sinais</h2>
+ <img src="_Imagens/Imagem13.png" > <br>
+
+A equação acima define uma interpolação entre os diversos valores ci das amostras do<br>
+ sinal.<br>
+(reconstrução e interpolação são nomes distintos para o mesmo problema).<br>
+
+ <img src="_Imagens/Imagem14.png" > <br>
+ <img src="_Imagens/Imagem15.png" > <br>
+Cada valor f(ui) é chamado amostra do sinal<br>
+A seqüência mostrada na equação 1 é chamada de seqüência de amostras.<br>
+
+
+<h3>Amostragem Pontual Uniforme</h3>
+Conceito de reticulado<br>
+Cada ponto no reticulado é chamado de vértice do reticulado<br>
+A amostragem pontual é uniforme quando o conjunto de pontos ui são vértices de um<br>
+ reticulado do espaço. <br>
+Número de amostras por unidade de espaço é chamado de taxa de amostragem ou<br>
+ freqüência de amostragem.<br>
+
+<h2>Reconstrução de sinais</h2>
+ <img src="_Imagens/Imagem13.png" > <br>
+
+A equação acima define uma interpolação entre os diversos valores ci das amostras do<br>
+ sinal.<br>
+(reconstrução e interpolação são nomes distintos para o mesmo problema).<br>
+
+ <img src="_Imagens/Imagem14.png" > <br>
+ <img src="_Imagens/Imagem15.png" > <br>
+</body>
+</div>
+</html>

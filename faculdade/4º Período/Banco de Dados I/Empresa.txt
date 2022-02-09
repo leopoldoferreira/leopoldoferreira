@@ -1,0 +1,35 @@
+create table profissional
+(n_controle number (5) not null primary key,
+nome char (10) not null,
+prof char (10) not null,
+data_nasc date,
+end char (15) not null)
+
+create table empresa_cliente
+(cgc number (5) not null primary key,
+nome char (10) not null,
+end char (15) not null)
+
+create table contratante
+(id number (5),
+cod_empresa number (5) references empresa_cliente(cgc),
+valor_hora number (10,2),
+vigencia_contratante char (40),
+cod_prof number (5) references profissional(n_controle))
+
+insert into profissional values( 1, 'Aureo', 'Dentista', '01-JAN-1990', 'Rua Um') 
+insert into profissional values( 2, 'Aurelio', 'Médico', '02-JAN-1889', 'Rua Dois')
+insert into profissional values( 3, 'Aurelino', 'Enfermeiro', '03-JAN-1888', 'Rua Tres')
+insert into empresa_cliente values( 999, 'ABC', 'Rua Um') 
+insert into empresa_cliente values( 888, 'ACC', 'Rua Dois')  
+insert into empresa_cliente values( 777, 'ADC', 'Rua Tres')  
+insert into contratante values( 123, 777, 16.6, 'função x,y,z', 2) 
+insert into contratante values( 345, 999, 10.2, 'função a,b,c', 3)
+insert into contratante values( 567, 888, 89, 'função c,d,f', 1)
+
+select * from profissional
+select * from empresa_cliente
+select * from contratante
+drop table profissional
+drop table empresa_cliente
+drop table contratante

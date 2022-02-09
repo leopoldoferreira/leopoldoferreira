@@ -1,0 +1,14 @@
+declare prod produto.codproduto%type;  
+ reg_produto produto%RowType;
+begin  
+	produto := &numeroprod;  
+	select * into reg_prod 
+	from produto
+	where produto.codproduto = prod;
+	  if reg_produto.codproduto is not null then
+		DBMS_OUTPUT.PUT_LINE('dados do produto: ' || reg_prod.nomproduto);
+	  end if;
+	exception
+	WHEN NO_DATA_FOUND THEN DBMS_OUTPUT.PUT_LINE('NÃO EXISTE PRODUTO COM O NUMERO '|| prod||'. POR FAVOR VERIFIQUE.');
+ 	WHEN TOO_MANY_ROWS THEN DBMS_OUTPUT.PUT_LINE('MAIS DE UM PRODUTO COM O NUMERO '||prod||' FOI ENCONTRADO, POR FAVOR VERIFIQUE.');
+END;

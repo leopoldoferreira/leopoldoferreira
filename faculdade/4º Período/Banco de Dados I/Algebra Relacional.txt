@@ -1,0 +1,66 @@
+create table Relacao_Agencia(
+nomeAgencia char (30) NOT NULL PRIMARY KEY,
+cidadeAgencia char (30) NOT NULL
+)
+insert into Relacao_Agencia values('São João', 'POA')
+insert into Relacao_Agencia values('Assis Brasil', 'Canoas')
+insert into Relacao_Agencia values('Verde', 'Guaíba')
+insert into Relacao_Agencia values('Farrapos', 'POA')
+insert into Relacao_Agencia values('Itu', 'Canoas')
+
+create table Relacao_Cliente(
+nomeCliente char (30) NOT NULL PRIMARY KEY,
+ruaCliente char (30) NOT NULL,
+cidadeCliente char (30) NOT NULL
+)
+insert into Relacao_Cliente values('Denise', 'Olinda', 'POA')
+insert into Relacao_Cliente values('João', 'Paraná', 'POA')
+insert into Relacao_Cliente values('Pedro', 'Pará', 'Canoas')
+insert into Relacao_Cliente values('Ana', 'Viena', 'Canoas')
+insert into Relacao_Cliente values('Maria', 'Chicago', 'Guaíba')
+
+
+create table Relacao_Conta(
+nomeAgencia char (30) NOT NULL REFERENCES Relacao_Agencia(nomeAgencia),
+nroConta number (5) NOT NULL PRIMARY KEY,
+nomeCliente char (30) NOT NULL REFERENCES Relacao_Cliente(nomeCliente),
+saldo number (10) NOT NULL
+)
+insert into relacao_conta values('Farrapos', 100, 'Denise', 2000)
+insert into relacao_conta values('Farrapos', 200, 'Pedro', 300)
+insert into relacao_conta values('São João', 300, 'Ana', 2000)
+insert into relacao_conta values('Verde', 50, 'Maria', 2000)
+insert into relacao_conta values('São João', 400, 'João', 2000)
+
+create table Relacao_Emprestimo(
+nomeAgencia char (30) NOT NULL REFERENCES Relacao_Agencia(nomeAgencia),
+nroEmprestimo number (5) NOT NULL,
+nomeCliente char (30) REFERENCES Relacao_Cliente(nomeCliente),
+valor number (10) NOT NULL
+)
+insert into Relacao_Emprestimo values('Assis Brasil', 100, 'Pedro', 7000)
+insert into Relacao_Emprestimo values('Verde', 200, 'Maria', 11000)
+insert into Relacao_Emprestimo values('Assis Brasil', 400, 'João', 5000)
+insert into Relacao_Emprestimo values('São João', 500, 'Ana', 35000)
+
+ -- Seleção --
+Select * from Relacao_Emprestimo where nomeAgencia = 'São João'
+Select * from Relacao_Emprestimo where valor > 5000
+Select * from Relacao_Emprestimo where nomeAgencia = 'São João' and valor > 5000
+
+-- Projeção --
+Select nomeAgencia,nomeCliente from Relacao_Emprestimo
+Select * from Relacao_Emprestimo, Relacao_Cliente where Relacao_Emprestimo.nomeCliente = Relacao_Cliente.nomeCliente
+Select * from Relacao_Conta,Relacao_Cliente, Relacao_Agencia where Relacao_Cliente.nomeCliente = Relacao_Conta.nomeCliente and Relacao_Conta.nomeAgencia = Relacao_Agencia.nomeAgencia
+
+-- União -- falta fazer**
+Select nomeCliente from Relacao_Emprestimo where nomeAgencia = 'São João' UNION Select nomeCliente from Relacao_Conta where nomeAgencia = 'São João'
+
+-- Diferença --
+Select nomeCliente from Relacao_Conta where nomeAgencia = 'São João' MINUS Select nomeCliente from Relacao_Emprestimo where nomeAgencia = 'São João'
+
+-- Interseção --
+Select nomeCliente from Relacao_Conta where nomeAgencia = 'São João' MINUS( Select nomeCliente from Relacao_Conta where nomeAgencia = 'São João' MINUs Select nomeCliente from Relacao_Emprestimo where nomeAgencia = 'São João')
+
+-- Junção Natural --
+Select nomeCliente, cidadeCliente from Relacao_Emprestimo NATURAL JOIN Relacao_Cliente

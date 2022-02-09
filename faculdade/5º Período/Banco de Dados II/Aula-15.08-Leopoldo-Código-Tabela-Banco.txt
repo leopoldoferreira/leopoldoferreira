@@ -1,0 +1,22 @@
+create table agencia(
+codigo_agencia number (3) not null,
+nome_agencia char (30) not null,
+endereco_agencia char (30) not null )
+
+insert into agencia values ( 15, 'AGENCIAQUINZE', 'RUAQUINZE' )
+insert into agencia values ( 100, 'AGENCIACEM', 'RUACEM' )
+insert into agencia values ( 50, 'AGENCIACINQUENTA', 'RUACINQUENTA' )
+
+create table cadastro(
+nome_cliente char (10),
+endereco_cliente char (15),
+cpf number (11),
+conta_corrente number (5) not null,
+saldo number (10,2) )
+
+insert into cadastro values ( 'RUBENS', 'RUAMEIO', 12345678901, 12121, 100 )
+insert into cadastro values ( 'RONALDO', 'RUADEZ', 01987654321, 13131, 1000 )
+insert into cadastro values ( 'RAFAEL', 'RUAQUINZE', 65498732101, 14141, 1000 )
+
+select * from agencia
+select * from cadastro
