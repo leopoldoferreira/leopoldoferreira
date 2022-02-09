@@ -6,8 +6,7 @@
 [Linkedin](https://linkedin.com/in/leopoldo-ferreira) - 
 [DataCamp](https://www.datacamp.com/profile/leopoldoferreira)
 
-- :eyes: Procurando por uma oportunidade de emprego
-
+- :eyes: Procurando por uma oportunidade de emprego, tenho interesse em qualquer área!
 
 ### Experiência Acadêmica:
 
