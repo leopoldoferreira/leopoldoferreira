@@ -1,6 +1,6 @@
 ### Olá, meu nome é Leopoldo Ferreira 👋  [[English Version]](#1)
 
-## Sou apaixonado por tecnologia e eterno estudante.
+## Apaixonado por tecnologia, eterno estudante.
 
 [Currículo](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf) <br>
 [Linkedin](https://linkedin.com/in/leopoldo-ferreira) <br>
