@@ -1,44 +1,32 @@
-### Olá, meu nome é Leopoldo Ferreira 👋  [[English Version]](#1)
+### Olá, meu nome é Leopoldo Ferreira 👋
 
 ## Apaixonado por tecnologia, eterno estudante.
 
-[Currículo](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf) <br>
-[Linkedin](https://linkedin.com/in/leopoldo-ferreira) <br>
-[DataCamp](https://www.datacamp.com/profile/leopoldoferreira) <br>
+[Currículo](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Currículo%20-%20Leopoldo%20Ferreira.docx.pdf) - 
+[Linkedin](https://linkedin.com/in/leopoldo-ferreira) - 
+[DataCamp](https://www.datacamp.com/profile/leopoldoferreira)
 
-### Sobre mim:
-
-- Bacharel em Sistemas de Informação
-- Inglês avançado
-- Aprendi a programar em C e Java
-- Aprendi Inteligência Artificial e Python na minha experiência de mestrado, o qual não consegui concluir
-
-### Atualmente estou:
 - :eyes: Procurando por uma oportunidade de emprego
-- Aprendendo disciplinas de Ciência de Dados no [DataCamp](https://www.datacamp.com/profile/leopoldoferreira)
-- Aprendendo Desenvolvimento [Web com Kotlin/Spring](https://www.udemy.com/share/104E503@MrWeaUsfTPGnTBT-9S9ZHtS678sLqSiX-TSt07fIxc6Nyc0N6crtNuFooKArbY0G/)
-<br />
-<br />
 
----
 
-### Hi there, I'm Leopoldo Ferreira 👋 <a name="1"></a>
+### Experiência Acadêmica:
 
-[Resume](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/Resume%20-%20Leopoldo%20Ferreira.docx.pdf) <br>
-[Linkedin](https://linkedin.com/in/leopoldo-ferreira) <br>
-[DataCamp](https://www.datacamp.com/profile/leopoldoferreira) <br>
+#### Graduação:
+- Bacharel em Sistemas de Informação pela UEMG - Universidade Estadual de Minas Gerais <br>
+[Histórico Resumido](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/faculdade/historico_resumido.pdf) <br>
+- Aprendi programação (C, Java), Banco de Dados (SQL), Programação Web (HTML+CSS), Estrutura de Dados, Engenharia de Software, entre outras disciplinas fundamentais que envolvem sistemas
+- Participante do Núcleo de Prática em Sistemas de Informação [(NUPSI)](https://github.com/UEMGNUPSI)
+- Representante Discente do Centro Acadêmico de Sistemas de Informação
+- Representante do Colegiado do Curso
+- Realização de projeto de Pesquisa e Extensão, os quais foram precursores para ingresso no Mestrado <br>
+[Currículo Lattes](http://lattes.cnpq.br/7733759309376292) <br>
 
-### About me:
+#### Pós Graduação:
+- Mestrado não concluído em Ciência da Computação pela UNESP - Universidade Estadual de São Paulo <br>
+- Aprendi para além das disciplinas cursadas, conceitos de Segurança, Redes, Linux, e principalmente, Inteligência Artificial e Python <br>
+[Porção do meu Projeto Final](https://github.com/leopoldoferreira/domain-classifier)
+- Fui aprovado nas disciplinas e todas as fases até a defesa, adquiri muito conhecimento, porém, não concluí por rejeição da defesa <br>
 
-- Bachelor in Information Systems
-- Advanced English
-- Learned to code in C and Java
-- Learned Artificial Intelligence and Python on my Master Degree experience, unfortunately I didn't finish
-
-### I'm currently:
-- :eyes: Looking for a job
-- Learning Data Science subjects on DataCamp
-- Learning Web Development with Kotlin/Spring
 
 [linkedin]: https://linkedin.com/in/leopoldo-ferreira
 [datacamp]: https://www.datacamp.com/profile/leopoldoferreira
