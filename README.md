@@ -24,7 +24,7 @@
 
 #### Pós Graduação:
 - Mestrado não concluído em Ciência da Computação pela UNESP - Universidade Estadual de São Paulo <br>
-- Aprendi para além das disciplinas cursadas, conceitos de Segurança, Redes, Linux, e principalmente, Inteligência Artificial e Python <br>
+- Para além das disciplinas cursadas, aprendi conceitos de Segurança, Redes, Linux, e principalmente, Inteligência Artificial e Python <br>
 [Porção do meu Projeto Final](https://github.com/leopoldoferreira/domain-classifier)
 - Fui aprovado nas disciplinas e todas as fases até a defesa, adquiri muito conhecimento, porém, não concluí por rejeição da defesa <br>
 
