@@ -7,7 +7,7 @@
 [HackerRank](https://www.hackerrank.com/leopoldoferreira)
 
 - :eyes: Procurando por uma oportunidade de emprego
-- :heart: Python 
+- :heart: Programação 
 - 🗽 Inglês Avançado <br>
 
 ### Experiência Acadêmica:
