@@ -6,7 +6,7 @@
 [DataCamp](https://www.datacamp.com/profile/leopoldoferreira) | 
 [HackerRank](https://www.hackerrank.com/leopoldoferreira)
 
-- :eyes: Procurando por uma oportunidade de emprego em desenvolvimento web
+- :eyes: Procurando por uma oportunidade de emprego
 - :heart: Python 
 - 🗽 Inglês Avançado <br>
 
