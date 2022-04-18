@@ -8,12 +8,6 @@
 
 - :heart: Programação 
 - 🗽 Inglês Avançado <br>
-
-
-
-
-### Experiência Acadêmica:
-#### Graduação:
 - Bacharel em Sistemas de Informação pela UEMG - Universidade Estadual de Minas Gerais <br>
 
 
