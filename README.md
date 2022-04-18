@@ -6,12 +6,13 @@
 [DataCamp](https://www.datacamp.com/profile/leopoldoferreira) | 
 [HackerRank](https://www.hackerrank.com/leopoldoferreira)
 
-- :eyes: Procurando por uma oportunidade de emprego
 - :heart: Programação 
 - 🗽 Inglês Avançado <br>
 
-### Experiência Acadêmica:
 
+
+
+### Experiência Acadêmica:
 #### Graduação:
 - Bacharel em Sistemas de Informação pela UEMG - Universidade Estadual de Minas Gerais <br>
 [Histórico Resumido](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/faculdade/historico_resumido.pdf) <br>
