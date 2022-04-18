@@ -15,7 +15,6 @@
 ### Experiência Acadêmica:
 #### Graduação:
 - Bacharel em Sistemas de Informação pela UEMG - Universidade Estadual de Minas Gerais <br>
-[Histórico Resumido](https://github.com/leopoldoferreira/leopoldoferreira/blob/main/faculdade/historico_resumido.pdf) <br>
 - Aprendi programação (C, Java), Banco de Dados (SQL), Programação Web (HTML+CSS), Estrutura de Dados, Engenharia de Software, entre outras disciplinas fundamentais que envolvem sistemas
 - Participante do Núcleo de Prática em Sistemas de Informação [(NUPSI)](https://github.com/UEMGNUPSI)
 - Representante Titular Discente na Coordenação de Curso
