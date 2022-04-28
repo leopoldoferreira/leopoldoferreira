@@ -6,7 +6,6 @@
 [DataCamp](https://www.datacamp.com/profile/leopoldoferreira) | 
 [HackerRank](https://www.hackerrank.com/leopoldoferreira)
 
-- :heart: Programação 
 - 🗽 Inglês Avançado <br>
 - Bacharel em Sistemas de Informação pela UEMG - Universidade Estadual de Minas Gerais <br>
 
