@@ -1,6 +1,4 @@
 ### Hi, my name is Leopoldo Ferreira 👋
+Student, programmer, problem solver, engineer. Looking forward to build valuable solutions to real world problems.
 
-[Linkedin](https://linkedin.com/in/leopoldo-ferreira) | [HackerRank](https://www.hackerrank.com/leopoldoferreira)
-
-[linkedin]: https://linkedin.com/in/leopoldo-ferreira
-[datacamp]: https://www.datacamp.com/profile/leopoldoferreira
+[Linkedin](https://linkedin.com/in/leopoldo-ferreira) | [Alura](https://www.alura.com.br/user/leopoldoferreira)
