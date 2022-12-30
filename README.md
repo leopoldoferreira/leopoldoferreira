@@ -1,6 +1,10 @@
 ### Hi, my name is Leopoldo Ferreira 👋
 Student, programmer, problem solver, engineer. Looking forward to build valuable solutions to real world problems. 
-<br>
+Minas Gerais State University BSc in Information Systems
+
+[Resume](https://leopoldoferreira.github.io/html-css-cursos/) with HTML+CSS
+
+Check out my [Repositories](https://github.com/leopoldoferreira?tab=repositories)!
 ### Social
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/leopoldo-ferreira)
 [![Alura](https://img.shields.io/badge/-Alura-blue?style=for-the-badge)](alura.com.br/user/leopoldoferreira)
