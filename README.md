@@ -7,7 +7,7 @@ Minas Gerais State University BSc in Information Systems
 Check out my [Repositories](https://github.com/leopoldoferreira?tab=repositories)!
 ### Social
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/leopoldo-ferreira)
-[![Alura](https://img.shields.io/badge/-Alura-blue?style=for-the-badge)](alura.com.br/user/leopoldoferreira)
+[![Alura](https://img.shields.io/badge/-Alura-blue?style=for-the-badge)](https://alura.com.br/user/leopoldoferreira)
 [![HackerRank](https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)](https://www.hackerrank.com/leopoldoferreira)
 
 ### Currently Learning
